@@ -1,0 +1,11 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Menu/Menu.uss?fileID=7433441132597879392&amp;guid=4999e485cd44a304b8ed707a2d7230e1&amp;type=3#Menu"/>
+    <ui:VisualElement style="flex-grow: 1; flex-direction: column; background-color: rgb(253, 249, 249); background-image: url(&quot;project://database/Assets/Sprite/fundo.jpg?fileID=2800000&amp;guid=0d88e7b0da224d944958da156f5f1cf7&amp;type=3#fundo&quot;);">
+        <ui:Image source="project://database/Assets/Sprite/titulo_hell_space.png?fileID=8248441122982734895&amp;guid=2479fdc13ca2ec846833ec0ee6b2f044&amp;type=3#titulo_hell_space_0" name="titulo" style="height: 206px; width: 541px;"/>
+        <ui:GroupBox name="GroupBox" style="height: 50%;">
+            <ui:Image source="" uv="-0.3,0,1,1" name="play" class="buton" style="height: 200%; width: 100%; background-position-y: center; min-width: 160%; -unity-background-scale-mode: scale-to-fit; background-image: url(&quot;project://database/Assets/Sprite/botao_de_play.png?fileID=2800000&amp;guid=6938737a5fc12394f967908b64776607&amp;type=3#botao_de_play&quot;); background-position-x: center; background-size: auto auto;"/>
+            <ui:Image name="opcoes" source="" class="buton" style="height: 200%; background-size: auto auto; background-image: url(&quot;project://database/Assets/Sprite/opcoes.png?fileID=2800000&amp;guid=73ea6ff3266e862489567804fa656898&amp;type=3#opcoes&quot;); -unity-background-scale-mode: scale-to-fit; background-position-x: center; background-position-y: bottom 0; width: 100%;"/>
+            <ui:Image name="sair" source="project://database/Assets/Sprite/sair.png?fileID=2800000&amp;guid=5f5255d5c9b4ee14ea94d6c5e6dc2e3d&amp;type=3#sair" class="buton" style="height: 200%; background-size: 100% 200%; width: 875px; background-image: url(&quot;project://database/Assets/Sprite/sair.png?fileID=2800000&amp;guid=5f5255d5c9b4ee14ea94d6c5e6dc2e3d&amp;type=3#sair&quot;);"/>
+        </ui:GroupBox>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,8 @@
+:root {
+}
+
+.buton {
+    background-color: rgba(248, 248, 248, 0);
+    -unity-background-scale-mode: stretch-to-fill;
+    min-width: 160%;
+}

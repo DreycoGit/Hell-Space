@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: b959fb987c3a4b342a4636b69f0f861a
+guid: 831347390c056e54fb0e2e4327b6553c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 346741330663428085
-    second: grinsom_zangao_spritesheet_0
+      213: -1747260026990851560
+    second: grinsom_zangao_spritesheet 1_0
   - first:
-      213: 8846084090772037345
-    second: grinsom_zangao_spritesheet_1
+      213: 4082070423638291889
+    second: grinsom_zangao_spritesheet 1_1
   - first:
-      213: 8381548404097551631
-    second: grinsom_zangao_spritesheet_2
+      213: 2030680309777970436
+    second: grinsom_zangao_spritesheet 1_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,7 +119,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: grinsom_zangao_spritesheet_0
+      name: grinsom_zangao_spritesheet 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -134,14 +134,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5ffc323376fdfc400800000000000000
-      internalID: 346741330663428085
+      spriteID: 81a88f8434c70c7e0800000000000000
+      internalID: -1747260026990851560
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grinsom_zangao_spritesheet_1
+      name: grinsom_zangao_spritesheet 1_1
       rect:
         serializedVersion: 2
         x: 307
@@ -156,14 +156,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ee93bbac9a93ca70800000000000000
-      internalID: 8846084090772037345
+      spriteID: 1b5b61d2c6d66a830800000000000000
+      internalID: 4082070423638291889
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grinsom_zangao_spritesheet_2
+      name: grinsom_zangao_spritesheet 1_2
       rect:
         serializedVersion: 2
         x: 614
@@ -178,8 +178,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f0d0afdbddd315470800000000000000
-      internalID: 8381548404097551631
+      spriteID: 40532b49bfc6e2c10800000000000000
+      internalID: 2030680309777970436
       vertices: []
       indices: 
       edges: []
@@ -188,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 660aa59081783654185a2c6846b8be00
+    spriteID: d25a7aad1eb091c4bb828b5d75eca64f
     internalID: 0
     vertices: []
     indices: 
@@ -200,9 +200,9 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":1.0},"gridSpriteSize":{"x":307.0,"y":384.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      grinsom_zangao_spritesheet_0: 346741330663428085
-      grinsom_zangao_spritesheet_1: 8846084090772037345
-      grinsom_zangao_spritesheet_2: 8381548404097551631
+      grinsom_zangao_spritesheet 1_0: -1747260026990851560
+      grinsom_zangao_spritesheet 1_1: 4082070423638291889
+      grinsom_zangao_spritesheet 1_2: 2030680309777970436
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

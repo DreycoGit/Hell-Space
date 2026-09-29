@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     private float vidaJogadorPercentual = 1f;
     private int numeroFaseAtual;
     private string nomeFaseAtual = "";
+    private float vidaBossPercentual = 1f;
 
     private void Awake()
     {
@@ -48,6 +49,7 @@ public class GameManager : MonoBehaviour
         AtualizarPontos();
         AtualizarFase(numeroFaseAtual, nomeFaseAtual);
         AtualizarVida(vidaJogadorPercentual);
+        AtualizarVidaBoss(vidaBossPercentual);
     }
 
     public void AdicionarPontos(int valor)
@@ -76,7 +78,8 @@ public class GameManager : MonoBehaviour
 
     public void AtualizarVidaBoss(float percentual)
     {
-        if (textoVidaBoss != null) textoVidaBoss.text = $"BOSS {Mathf.RoundToInt(Mathf.Clamp01(percentual) * 100f)}%";
+        vidaBossPercentual = Mathf.Clamp01(percentual);
+        if (textoVidaBoss != null) textoVidaBoss.text = $"BOSS {Mathf.RoundToInt(vidaBossPercentual * 100f)}%";
     }
 
     public void FimDeJogo()

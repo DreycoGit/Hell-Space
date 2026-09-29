@@ -26,6 +26,10 @@ public class PlayerController : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         vida = GetComponent<PlayerHealth>();
+
+        // A nave sobrevive à troca de cena — assim ela só existe uma vez,
+        // criada na primeira fase, e continua a mesma (com a vida atual) nas próximas.
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Update()

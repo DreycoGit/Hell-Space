@@ -56,6 +56,18 @@ public class FormationManager : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        // A nave persiste de uma cena pra outra (veja PlayerController.cs), então
+        // nas cenas 2 em diante ela não vai poder ser arrastada manualmente aqui —
+        // este fallback acha ela sozinho pela tag "Jogador".
+        if (jogador == null)
+        {
+            GameObject alvo = GameObject.FindGameObjectWithTag("Jogador");
+            if (alvo != null) jogador = alvo.transform;
+        }
+    }
+
     private void Update()
     {
         if (inimigos.Count == 0) return;

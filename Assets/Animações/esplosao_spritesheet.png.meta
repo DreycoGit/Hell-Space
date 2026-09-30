@@ -1,0 +1,478 @@
+fileFormatVersion: 2
+guid: 2069f243e251be14db7512810c9cd393
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5783465206000434720
+    second: esplosao_spritesheet_0
+  - first:
+      213: 6183215797622352671
+    second: esplosao_spritesheet_1
+  - first:
+      213: 1350101000260981338
+    second: esplosao_spritesheet_2
+  - first:
+      213: -1072218339457359648
+    second: esplosao_spritesheet_3
+  - first:
+      213: -8924123599855145181
+    second: esplosao_spritesheet_4
+  - first:
+      213: -8689876672961477503
+    second: esplosao_spritesheet_5
+  - first:
+      213: 376591670858372339
+    second: esplosao_spritesheet_6
+  - first:
+      213: -3669180086327829019
+    second: esplosao_spritesheet_7
+  - first:
+      213: -6091518933558717406
+    second: esplosao_spritesheet_8
+  - first:
+      213: 6251375273051186427
+    second: esplosao_spritesheet_9
+  - first:
+      213: -8627221630957417289
+    second: esplosao_spritesheet_10
+  - first:
+      213: 6384444445118252226
+    second: esplosao_spritesheet_11
+  - first:
+      213: -6764594857273484006
+    second: esplosao_spritesheet_12
+  - first:
+      213: -6972226229148597151
+    second: esplosao_spritesheet_13
+  - first:
+      213: -4092390423436023004
+    second: esplosao_spritesheet_14
+  - first:
+      213: -5504458888243702682
+    second: esplosao_spritesheet_15
+  - first:
+      213: -2074743220925158421
+    second: esplosao_spritesheet_16
+  - first:
+      213: 7905540017112684005
+    second: esplosao_spritesheet_17
+  - first:
+      213: 7715456468615940098
+    second: esplosao_spritesheet_18
+  - first:
+      213: 5184208929793290494
+    second: esplosao_spritesheet_19
+  - first:
+      213: -3886789416175333551
+    second: esplosao_spritesheet_20
+  - first:
+      213: 7998718441859997507
+    second: esplosao_spritesheet_21
+  - first:
+      213: -2015009043952141704
+    second: esplosao_spritesheet_22
+  - first:
+      213: -1508183239533337309
+    second: esplosao_spritesheet_23
+  - first:
+      213: -5692350148726791495
+    second: esplosao_spritesheet_24
+  - first:
+      213: 2455583812256172434
+    second: esplosao_spritesheet_25
+  - first:
+      213: 5203060570570325674
+    second: esplosao_spritesheet_26
+  - first:
+      213: 1214108425746402723
+    second: esplosao_spritesheet_27
+  - first:
+      213: 503900907133096163
+    second: esplosao_spritesheet_28
+  - first:
+      213: -702713079545286530
+    second: esplosao_spritesheet_29
+  - first:
+      213: 7364657430724861876
+    second: esplosao_spritesheet_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: esplosao_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02ebc7676fef24050800000000000000
+      internalID: 5783465206000434720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: esplosao_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1b2dd202023fc550800000000000000
+      internalID: 6183215797622352671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: esplosao_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a529473e4b58cb210800000000000000
+      internalID: 1350101000260981338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: esplosao_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e02cf2e917be11f0800000000000000
+      internalID: -1072218339457359648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: esplosao_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32f24f23ed4272480800000000000000
+      internalID: -8924123599855145181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: esplosao_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1848d26f43b576780800000000000000
+      internalID: -8689876672961477503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: esplosao_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 1842
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f452ee112ce93500800000000000000
+      internalID: 376591670858372339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: esplosao_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 2149
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ed1e71d624741dc0800000000000000
+      internalID: -3669180086327829019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: esplosao_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 2456
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2249aaeddc3967ba0800000000000000
+      internalID: -6091518933558717406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: esplosao_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 2763
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf460eb80b851c650800000000000000
+      internalID: 6251375273051186427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: esplosao_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 3070
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bc8738b2a3f54880800000000000000
+      internalID: -8627221630957417289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9255f81b4fdbd454098e460058cb9a65
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":11.0,"y":1.0},"gridSpriteSize":{"x":307.0,"y":384.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      esplosao_spritesheet_0: 5783465206000434720
+      esplosao_spritesheet_1: 6183215797622352671
+      esplosao_spritesheet_10: -8627221630957417289
+      esplosao_spritesheet_2: 1350101000260981338
+      esplosao_spritesheet_3: -1072218339457359648
+      esplosao_spritesheet_4: -8924123599855145181
+      esplosao_spritesheet_5: -8689876672961477503
+      esplosao_spritesheet_6: 376591670858372339
+      esplosao_spritesheet_7: -3669180086327829019
+      esplosao_spritesheet_8: -6091518933558717406
+      esplosao_spritesheet_9: 6251375273051186427
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -6,7 +6,7 @@ public class MenuManager : MonoBehaviour
     // Botão PLAY
     public void JogarJogo()
     {
-        SceneManager.LoadScene("Game"); // troque "Game" pelo nome exato da sua cena do jogo
+        SceneManager.LoadScene("Fase-1"); // troque "Game" pelo nome exato da sua cena do jogo
     }
 
     // Botão OPÇÕES

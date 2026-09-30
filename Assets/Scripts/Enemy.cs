@@ -30,7 +30,8 @@ public struct DadosDoInimigo
 public class Enemy : MonoBehaviour
 {
     [Header("Configuração do tipo (ajuste vida/velocidade/pontos livremente aqui)")]
-    [SerializeField] private DadosDoInimigo dados = new DadosDoInimigo
+    [SerializeField]
+    private DadosDoInimigo dados = new DadosDoInimigo
     {
         tipo = TipoDeInimigo.CrimsonFraco,
         vida = 1f,
@@ -44,7 +45,7 @@ public class Enemy : MonoBehaviour
 
     [Header("Mergulho")]
     [SerializeField] private float velocidadeMergulho = 4f;
-
+    // O inimigo desce em linha reta na direção do jogador ao mergulhar.
     private float vidaAtual;
     private bool emMergulho;
     private Vector3 posicaoNaFormacao;
@@ -97,8 +98,7 @@ public class Enemy : MonoBehaviour
         {
             t += Time.deltaTime;
             float progresso = t / duracao;
-            float ondulacao = Mathf.Sin(progresso * Mathf.PI * 3f) * 1.2f;
-            transform.position = Vector3.Lerp(origem, alvo, progresso) + new Vector3(ondulacao, 0f, 0f);
+            transform.position = Vector3.Lerp(origem, alvo, progresso);
             yield return null;
         }
 

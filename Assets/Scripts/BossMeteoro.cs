@@ -9,7 +9,7 @@ public class BossMeteoro : BossBase
 
     protected override void Awake()
     {
-        vidaMaxima = 800f;
+        vidaMaxima = 200f;
         base.Awake();
     }
 

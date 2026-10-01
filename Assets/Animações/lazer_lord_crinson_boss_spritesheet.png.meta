@@ -156,19 +156,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -560,10 +547,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2f52b9275a9b8f950800000000000000
-      internalID: 6483135783843341810
+      spriteID: 097fde1cb7dd73f438abc451de47840e
+      internalID: 193067985
       vertices: []
       indices: 
       edges: []
@@ -582,10 +569,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1d4a42224c91e24d0800000000000000
-      internalID: -3157557958563027759
+      spriteID: 2aed34c17ca26ff488b82dd82fbc8192
+      internalID: -355738641
       vertices: []
       indices: 
       edges: []
@@ -604,10 +591,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 538db887547a6d0d0800000000000000
-      internalID: -3398344951987447755
+      spriteID: 986b2bba51a3a9a49bec1f570649207b
+      internalID: 1123885157
       vertices: []
       indices: 
       edges: []
@@ -626,10 +613,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 81d9ee2f733387980800000000000000
-      internalID: -8541020377916203752
+      spriteID: 314e77b6333b7ff40aef250dd5a3261d
+      internalID: -456057959
       vertices: []
       indices: 
       edges: []
@@ -638,7 +625,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d5467632259aa014191156dbc88fedac
+    spriteID: 2807bae7a205d5445bae2ada7fdbfef5
     internalID: 0
     vertices: []
     indices: 
@@ -659,11 +646,11 @@ TextureImporter:
       lazer_lord_crinson_boss_spritesheet_14: 2638913836334938338
       lazer_lord_crinson_boss_spritesheet_15: -5873667251043317424
       lazer_lord_crinson_boss_spritesheet_16: 337639914656440331
-      lazer_lord_crinson_boss_spritesheet_17: 6483135783843341810
-      lazer_lord_crinson_boss_spritesheet_18: -3157557958563027759
-      lazer_lord_crinson_boss_spritesheet_19: -3398344951987447755
+      lazer_lord_crinson_boss_spritesheet_17: 193067985
+      lazer_lord_crinson_boss_spritesheet_18: -355738641
+      lazer_lord_crinson_boss_spritesheet_19: 1123885157
       lazer_lord_crinson_boss_spritesheet_2: 2249960128189536039
-      lazer_lord_crinson_boss_spritesheet_20: -8541020377916203752
+      lazer_lord_crinson_boss_spritesheet_20: -456057959
       lazer_lord_crinson_boss_spritesheet_3: -6574026541413961281
       lazer_lord_crinson_boss_spritesheet_4: -612948739230031639
       lazer_lord_crinson_boss_spritesheet_5: 9043478912627215162

@@ -8,6 +8,13 @@ public class BossWhiteScale : BossBase
     [SerializeField] private Transform[] pontosDeTiro;
     [SerializeField] private float intervaloEntreTiros = 0.35f;
 
+    [Header("Movimento (vai e volta na horizontal)")]
+    [SerializeField] private float velocidadeMovimento = 1.5f;
+    [SerializeField] private float limiteEsquerda = -3.5f;
+    [SerializeField] private float limiteDireita = 3.5f;
+
+    private int direcaoMovimento = 1;
+
     protected override void Awake()
     {
         vidaMaxima = 900f;
@@ -17,6 +24,16 @@ public class BossWhiteScale : BossBase
     protected override void IniciarBatalha()
     {
         StartCoroutine(RotinaDeSpam());
+    }
+
+    private void Update()
+    {
+        if (!EstaVivo) return;
+
+        transform.position += Vector3.right * direcaoMovimento * velocidadeMovimento * Time.deltaTime;
+
+        if (transform.position.x <= limiteEsquerda || transform.position.x >= limiteDireita)
+            direcaoMovimento *= -1;
     }
 
     private IEnumerator RotinaDeSpam()

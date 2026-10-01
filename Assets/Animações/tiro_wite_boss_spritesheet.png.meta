@@ -1,28 +1,19 @@
 fileFormatVersion: 2
-guid: 6ffb19c56299b1647895d1dc0e8f016d
+guid: 03db80cbf51a87f4baac67a62adafd31
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8085506483991770426
-    second: tiro_wite_spritesheet_0
+      213: -6675452461796778960
+    second: tiro_wite_boss_spritesheet_0
   - first:
-      213: -6551471085933890505
-    second: tiro_wite_spritesheet_1
+      213: 6379850321997275215
+    second: tiro_wite_boss_spritesheet_1
   - first:
-      213: -6992810120077815314
-    second: tiro_wite_spritesheet_2
+      213: 7461728754926567716
+    second: tiro_wite_boss_spritesheet_2
   - first:
-      213: -954611022429311432
-    second: tiro_wite_spritesheet_3
-  - first:
-      213: 5191359712360777257
-    second: tiro_wite_spritesheet_4
-  - first:
-      213: 5178681430885182035
-    second: tiro_wite_spritesheet_5
-  - first:
-      213: -5474681205110718359
-    second: tiro_wite_spritesheet_6
+      213: 7877707745947235016
+    second: tiro_wite_boss_spritesheet_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -131,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tiro_wite_spritesheet_0
+      name: tiro_wite_boss_spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1024
-        height: 768
+        width: 818
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a35727fee4d753070800000000000000
-      internalID: 8085506483991770426
+      spriteID: 03c9893aa570c53a0800000000000000
+      internalID: -6675452461796778960
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiro_wite_spritesheet_1
+      name: tiro_wite_boss_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 818
         y: 0
-        width: 1024
-        height: 768
+        width: 818
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 734faae22cf7415a0800000000000000
-      internalID: -6551471085933890505
+      spriteID: f402fc2e018c98850800000000000000
+      internalID: 6379850321997275215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiro_wite_spritesheet_2
+      name: tiro_wite_boss_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 2048
+        x: 1636
         y: 0
-        width: 1024
-        height: 768
+        width: 818
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,8 +181,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ee1510bce3c84fe90800000000000000
-      internalID: -6992810120077815314
+      spriteID: 42147b7c4c26d8760800000000000000
+      internalID: 7461728754926567716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiro_wite_boss_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 2454
+        y: 0
+        width: 818
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c23781057d335d60800000000000000
+      internalID: 7877707745947235016
       vertices: []
       indices: 
       edges: []
@@ -200,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c2b2ad7f798c4c3409adcc429ed3cd90
+    spriteID: fa352503b563891459d6c4504352582a
     internalID: 0
     vertices: []
     indices: 
@@ -210,11 +223,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":1.0},"gridSpriteSize":{"x":1024.0,"y":768.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":818.0,"y":1024.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      tiro_wite_spritesheet_0: 8085506483991770426
-      tiro_wite_spritesheet_1: -6551471085933890505
-      tiro_wite_spritesheet_2: -6992810120077815314
+      tiro_wite_boss_spritesheet_0: -6675452461796778960
+      tiro_wite_boss_spritesheet_1: 6379850321997275215
+      tiro_wite_boss_spritesheet_2: 7461728754926567716
+      tiro_wite_boss_spritesheet_3: 7877707745947235016
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

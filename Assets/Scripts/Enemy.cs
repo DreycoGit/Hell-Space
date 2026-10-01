@@ -45,7 +45,11 @@ public class Enemy : MonoBehaviour
 
     [Header("Mergulho")]
     [SerializeField] private float velocidadeMergulho = 4f;
-    // O inimigo desce em linha reta na direção do jogador ao mergulhar.
+
+    [Header("Power-up (opcional)")]
+    [SerializeField] private GameObject[] prefabsPowerUp; // os 3 prefabs de power-up
+    [SerializeField] private float chanceDeDroparPowerUp = 0.1f; // 10% por padrão
+
     private float vidaAtual;
     private bool emMergulho;
     private Vector3 posicaoNaFormacao;
@@ -98,7 +102,8 @@ public class Enemy : MonoBehaviour
         {
             t += Time.deltaTime;
             float progresso = t / duracao;
-            transform.position = Vector3.Lerp(origem, alvo, progresso);
+            float ondulacao = Mathf.Sin(progresso * Mathf.PI * 3f) * 1.2f;
+            transform.position = Vector3.Lerp(origem, alvo, progresso) + new Vector3(ondulacao, 0f, 0f);
             yield return null;
         }
 
@@ -118,7 +123,17 @@ public class Enemy : MonoBehaviour
     private void Morrer()
     {
         GameManager.Instancia?.AdicionarPontos(dados.pontos);
+        TentarDroparPowerUp();
         formacao?.RemoverInimigo(this);
         Destroy(gameObject);
+    }
+
+    private void TentarDroparPowerUp()
+    {
+        if (prefabsPowerUp == null || prefabsPowerUp.Length == 0) return;
+        if (Random.value > chanceDeDroparPowerUp) return;
+
+        GameObject prefab = prefabsPowerUp[Random.Range(0, prefabsPowerUp.Length)];
+        Instantiate(prefab, transform.position, Quaternion.identity);
     }
 }

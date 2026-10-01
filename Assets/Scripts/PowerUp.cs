@@ -17,6 +17,15 @@ public class PowerUp : MonoBehaviour
     [SerializeField] private float cadenciaPadraoParaVoltar = 0.35f;
     [SerializeField] private float multiplicadorDano = 2f;
     [SerializeField] private float duracaoDoBuff = 8f;
+    [SerializeField] private float velocidadeQueda = 2f;
+
+    private void Update()
+    {
+        transform.position += Vector3.down * velocidadeQueda * Time.deltaTime;
+
+        if (transform.position.y < -8f) // saiu da tela por baixo, sem ser pego
+            Destroy(gameObject);
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {

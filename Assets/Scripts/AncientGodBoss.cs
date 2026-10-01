@@ -26,12 +26,28 @@ public class AncientGodBoss : BossBase
     [SerializeField] private Transform pontoDireita;
     [SerializeField] private Transform pontoCentro;
 
+    [Header("Movimento (vai e volta na horizontal)")]
+    [SerializeField] private float velocidadeMovimento = 1.5f;
+    [SerializeField] private float limiteEsquerda = -3.5f;
+    [SerializeField] private float limiteDireita = 3.5f;
+
+    private int direcaoMovimento = 1;
     private int estagioAtual = 1;
 
     protected override void Awake()
     {
         vidaMaxima = vidaEstagio1;
         base.Awake();
+    }
+
+    private void Update()
+    {
+        if (!EstaVivo) return;
+
+        transform.position += Vector3.right * direcaoMovimento * velocidadeMovimento * Time.deltaTime;
+
+        if (transform.position.x <= limiteEsquerda || transform.position.x >= limiteDireita)
+            direcaoMovimento *= -1;
     }
 
     protected override void IniciarBatalha()

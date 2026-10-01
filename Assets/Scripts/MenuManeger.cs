@@ -1,17 +1,37 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
+    public GameObject painelOpcoes;
+    public Slider sliderVolume;
+
+    void Start()
+    {
+        float volume = PlayerPrefs.GetFloat("Volume", 1f);
+        AudioListener.volume = volume;
+
+        if (sliderVolume != null)
+        {
+            sliderVolume.minValue = 0f;
+            sliderVolume.maxValue = 1f;
+            sliderVolume.wholeNumbers = false;
+            sliderVolume.SetValueWithoutNotify(volume);
+            sliderVolume.onValueChanged.AddListener(MudarVolume);
+        }
+
+        if (painelOpcoes != null)
+            painelOpcoes.SetActive(false);
+    }
+
     // Botão PLAY
     public void JogarJogo()
     {
-        SceneManager.LoadScene("Fase-1"); // troque "Game" pelo nome exato da sua cena do jogo
+        SceneManager.LoadScene("Fase-1");
     }
 
     // Botão OPÇÕES
-    public GameObject painelOpcoes; // arraste um painel de opções aqui no Inspector, se tiver um
-
     public void AbrirOpcoes()
     {
         if (painelOpcoes != null)
@@ -26,10 +46,20 @@ public class MenuManager : MonoBehaviour
             painelOpcoes.SetActive(false);
     }
 
+    // Slider de volume
+    public void MudarVolume(float valor)
+    {
+        AudioListener.volume = valor;
+        PlayerPrefs.SetFloat("Volume", valor);
+    }
+
     // Botão SAIR
     public void SairJogo()
     {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
         Application.Quit();
-        Debug.Log("Saindo do jogo...");
+#endif
     }
 }

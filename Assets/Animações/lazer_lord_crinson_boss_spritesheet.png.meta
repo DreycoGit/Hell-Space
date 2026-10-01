@@ -1,0 +1,678 @@
+fileFormatVersion: 2
+guid: b22f777ec04abda4da54b259b23e051d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1962607305274934663
+    second: lazer_lord_crinson_boss_spritesheet_0
+  - first:
+      213: -912961653374592104
+    second: lazer_lord_crinson_boss_spritesheet_1
+  - first:
+      213: 2249960128189536039
+    second: lazer_lord_crinson_boss_spritesheet_2
+  - first:
+      213: -6574026541413961281
+    second: lazer_lord_crinson_boss_spritesheet_3
+  - first:
+      213: -612948739230031639
+    second: lazer_lord_crinson_boss_spritesheet_4
+  - first:
+      213: 9043478912627215162
+    second: lazer_lord_crinson_boss_spritesheet_5
+  - first:
+      213: 5645467367774657838
+    second: lazer_lord_crinson_boss_spritesheet_6
+  - first:
+      213: -985438626463856098
+    second: lazer_lord_crinson_boss_spritesheet_7
+  - first:
+      213: 1535072813312062547
+    second: lazer_lord_crinson_boss_spritesheet_8
+  - first:
+      213: 8166699623447182235
+    second: lazer_lord_crinson_boss_spritesheet_9
+  - first:
+      213: 4821986583362711384
+    second: lazer_lord_crinson_boss_spritesheet_10
+  - first:
+      213: -618344983128568563
+    second: lazer_lord_crinson_boss_spritesheet_11
+  - first:
+      213: -7827157110639804009
+    second: lazer_lord_crinson_boss_spritesheet_12
+  - first:
+      213: 1195367839799110468
+    second: lazer_lord_crinson_boss_spritesheet_13
+  - first:
+      213: 2638913836334938338
+    second: lazer_lord_crinson_boss_spritesheet_14
+  - first:
+      213: -5873667251043317424
+    second: lazer_lord_crinson_boss_spritesheet_15
+  - first:
+      213: 337639914656440331
+    second: lazer_lord_crinson_boss_spritesheet_16
+  - first:
+      213: 6483135783843341810
+    second: lazer_lord_crinson_boss_spritesheet_17
+  - first:
+      213: -3157557958563027759
+    second: lazer_lord_crinson_boss_spritesheet_18
+  - first:
+      213: -3398344951987447755
+    second: lazer_lord_crinson_boss_spritesheet_19
+  - first:
+      213: -8541020377916203752
+    second: lazer_lord_crinson_boss_spritesheet_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lazer_lord_crinson_boss_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97a308fdd0b63c4e0800000000000000
+      internalID: -1962607305274934663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_lord_crinson_boss_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89bdd0d96328453f0800000000000000
+      internalID: -912961653374592104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_lord_crinson_boss_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7279787d0d6793f10800000000000000
+      internalID: 2249960128189536039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_lord_crinson_boss_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb1f707f0bd54c4a0800000000000000
+      internalID: -6574026541413961281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_lord_crinson_boss_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e0aba48e5e5e77f0800000000000000
+      internalID: -612948739230031639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_lord_crinson_boss_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3b81e81824e08d70800000000000000
+      internalID: 9043478912627215162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_lord_crinson_boss_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 1842
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2d9447f8aab85e40800000000000000
+      internalID: 5645467367774657838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_lord_crinson_boss_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 2149
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1a4ca15ac40352f0800000000000000
+      internalID: -985438626463856098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_lord_crinson_boss_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 2456
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35433dd279cad4510800000000000000
+      internalID: 1535072813312062547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_lord_crinson_boss_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 2763
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9bb2ead902f55170800000000000000
+      internalID: 8166699623447182235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_lord_crinson_boss_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 3070
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85fa805ef332be240800000000000000
+      internalID: 4821986583362711384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_lord_crinson_boss_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 3377
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0d0af393823b67f0800000000000000
+      internalID: -618344983128568563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_lord_crinson_boss_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 3684
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7914423f31a506390800000000000000
+      internalID: -7827157110639804009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_lord_crinson_boss_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 3991
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44be62b87bcc69010800000000000000
+      internalID: 1195367839799110468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_lord_crinson_boss_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 4298
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e87b9f072e4f9420800000000000000
+      internalID: 2638913836334938338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_lord_crinson_boss_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 4605
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 059c7b451ca8c7ea0800000000000000
+      internalID: -5873667251043317424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_lord_crinson_boss_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 4912
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b002717a6b98fa400800000000000000
+      internalID: 337639914656440331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_lord_crinson_boss_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 5219
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f52b9275a9b8f950800000000000000
+      internalID: 6483135783843341810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_lord_crinson_boss_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 5526
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d4a42224c91e24d0800000000000000
+      internalID: -3157557958563027759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_lord_crinson_boss_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 5833
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 538db887547a6d0d0800000000000000
+      internalID: -3398344951987447755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_lord_crinson_boss_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 6140
+        y: 0
+        width: 307
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81d9ee2f733387980800000000000000
+      internalID: -8541020377916203752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d5467632259aa014191156dbc88fedac
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":21.0,"y":1.0},"gridSpriteSize":{"x":307.0,"y":384.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      lazer_lord_crinson_boss_spritesheet_0: -1962607305274934663
+      lazer_lord_crinson_boss_spritesheet_1: -912961653374592104
+      lazer_lord_crinson_boss_spritesheet_10: 4821986583362711384
+      lazer_lord_crinson_boss_spritesheet_11: -618344983128568563
+      lazer_lord_crinson_boss_spritesheet_12: -7827157110639804009
+      lazer_lord_crinson_boss_spritesheet_13: 1195367839799110468
+      lazer_lord_crinson_boss_spritesheet_14: 2638913836334938338
+      lazer_lord_crinson_boss_spritesheet_15: -5873667251043317424
+      lazer_lord_crinson_boss_spritesheet_16: 337639914656440331
+      lazer_lord_crinson_boss_spritesheet_17: 6483135783843341810
+      lazer_lord_crinson_boss_spritesheet_18: -3157557958563027759
+      lazer_lord_crinson_boss_spritesheet_19: -3398344951987447755
+      lazer_lord_crinson_boss_spritesheet_2: 2249960128189536039
+      lazer_lord_crinson_boss_spritesheet_20: -8541020377916203752
+      lazer_lord_crinson_boss_spritesheet_3: -6574026541413961281
+      lazer_lord_crinson_boss_spritesheet_4: -612948739230031639
+      lazer_lord_crinson_boss_spritesheet_5: 9043478912627215162
+      lazer_lord_crinson_boss_spritesheet_6: 5645467367774657838
+      lazer_lord_crinson_boss_spritesheet_7: -985438626463856098
+      lazer_lord_crinson_boss_spritesheet_8: 1535072813312062547
+      lazer_lord_crinson_boss_spritesheet_9: 8166699623447182235
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 50f61524101f9284e94824b1cc434100
+guid: 05d5a725179ff3d43b67c0098aa209ab
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1072968167951995614
-    second: wite_borboleta_spritesheet_0
+      213: -7681333099292662468
+    second: player_ship_spritesheet_0
   - first:
-      213: -162191821482276147
-    second: wite_borboleta_spritesheet_1
+      213: -1993105763495596408
+    second: player_ship_spritesheet_1
   - first:
-      213: 1228697442000958561
-    second: wite_borboleta_spritesheet_2
+      213: 1240223129582133380
+    second: player_ship_spritesheet_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,67 +119,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wite_borboleta_spritesheet_0
+      name: white_nave_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 307
-        height: 384
+        width: 818
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ed2941a2dd2f3ee00800000000000000
-      internalID: 1072968167951995614
+      spriteID: 17e20438a56c0004286ea21c0bf28d2f
+      internalID: 942446549
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wite_borboleta_spritesheet_1
+      name: white_nave_1
       rect:
         serializedVersion: 2
-        x: 307
+        x: 818
         y: 0
-        width: 307
-        height: 384
+        width: 818
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: dca431fc567cfbdf0800000000000000
-      internalID: -162191821482276147
+      spriteID: de7777798f7b0ab47bc817a01ae90ea2
+      internalID: -278936413
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wite_borboleta_spritesheet_2
+      name: white_nave_2
       rect:
         serializedVersion: 2
-        x: 614
+        x: 1636
         y: 0
-        width: 307
-        height: 384
+        width: 818
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 164f5e640d53d0110800000000000000
-      internalID: 1228697442000958561
+      spriteID: 56c35c500f252224684d672a76043730
+      internalID: 1291856056
       vertices: []
       indices: 
       edges: []
@@ -188,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: aa01342f3415bfe48836b127a3690fff
+    spriteID: fb3daa0fc929f9946bf6e846678de6b4
     internalID: 0
     vertices: []
     indices: 
@@ -198,11 +198,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":1.0},"gridSpriteSize":{"x":307.0,"y":384.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":1.0},"gridSpriteSize":{"x":818.0,"y":1024.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      wite_borboleta_spritesheet_0: 1072968167951995614
-      wite_borboleta_spritesheet_1: -162191821482276147
-      wite_borboleta_spritesheet_2: 1228697442000958561
+      white_nave_0: 942446549
+      white_nave_1: -278936413
+      white_nave_2: 1291856056
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

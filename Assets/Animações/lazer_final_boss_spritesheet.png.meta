@@ -1,0 +1,574 @@
+fileFormatVersion: 2
+guid: 49d9950be9a2ca240b921fb33f59a7b2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7631416915105190125
+    second: lazer_final_boss_spritesheet_0
+  - first:
+      213: -7386158783382931954
+    second: lazer_final_boss_spritesheet_1
+  - first:
+      213: 8419781333017110865
+    second: lazer_final_boss_spritesheet_2
+  - first:
+      213: -7935089252005812351
+    second: lazer_final_boss_spritesheet_3
+  - first:
+      213: -5443822120592679652
+    second: lazer_final_boss_spritesheet_4
+  - first:
+      213: 2899495702855622539
+    second: lazer_final_boss_spritesheet_5
+  - first:
+      213: 6252301652145971901
+    second: lazer_final_boss_spritesheet_6
+  - first:
+      213: 9073985784685555943
+    second: lazer_final_boss_spritesheet_7
+  - first:
+      213: -1585791116043481770
+    second: lazer_final_boss_spritesheet_8
+  - first:
+      213: 5991277868727026059
+    second: lazer_final_boss_spritesheet_9
+  - first:
+      213: 2728140192072293624
+    second: lazer_final_boss_spritesheet_10
+  - first:
+      213: -5237203067742081539
+    second: lazer_final_boss_spritesheet_11
+  - first:
+      213: -9078560218652875888
+    second: lazer_final_boss_spritesheet_12
+  - first:
+      213: 8604601307168138617
+    second: lazer_final_boss_spritesheet_13
+  - first:
+      213: -2001995584875827029
+    second: lazer_final_boss_spritesheet_14
+  - first:
+      213: 4479930834405033018
+    second: lazer_final_boss_spritesheet_15
+  - first:
+      213: 3639661718184380508
+    second: lazer_final_boss_spritesheet_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lazer_final_boss_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 818
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de090c5504d38e960800000000000000
+      internalID: 7631416915105190125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_final_boss_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 0
+        width: 818
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0634d558b71f7990800000000000000
+      internalID: -7386158783382931954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_final_boss_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 0
+        width: 818
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15923f0338219d470800000000000000
+      internalID: 8419781333017110865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_final_boss_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 2454
+        y: 0
+        width: 818
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1876c210e56e0e190800000000000000
+      internalID: -7935089252005812351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_final_boss_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 3272
+        y: 0
+        width: 818
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1dd8a9bf98a374b0800000000000000
+      internalID: -5443822120592679652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_final_boss_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 4090
+        y: 0
+        width: 818
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8f1b74caf31d3820800000000000000
+      internalID: 2899495702855622539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_final_boss_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 4908
+        y: 0
+        width: 818
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db2afbcf933a4c650800000000000000
+      internalID: 6252301652145971901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_final_boss_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 5726
+        y: 0
+        width: 818
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e07021cef54ded70800000000000000
+      internalID: 9073985784685555943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_final_boss_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 6544
+        y: 0
+        width: 818
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65d0240c1632ef9e0800000000000000
+      internalID: -1585791116043481770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_final_boss_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 7362
+        y: 0
+        width: 818
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b81422c7a7b452350800000000000000
+      internalID: 5991277868727026059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_final_boss_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 8180
+        y: 0
+        width: 818
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fc5fe5ec0d4cd520800000000000000
+      internalID: 2728140192072293624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_final_boss_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 8998
+        y: 0
+        width: 818
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfda5aace87b157b0800000000000000
+      internalID: -5237203067742081539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_final_boss_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 9816
+        y: 0
+        width: 818
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 093e337d499720280800000000000000
+      internalID: -9078560218652875888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_final_boss_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 10634
+        y: 0
+        width: 818
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9756e9bbc4fa96770800000000000000
+      internalID: 8604601307168138617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_final_boss_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 11452
+        y: 0
+        width: 818
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba073916f9b7734e0800000000000000
+      internalID: -2001995584875827029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_final_boss_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 12270
+        y: 0
+        width: 818
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a340803bb59eb2e30800000000000000
+      internalID: 4479930834405033018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_final_boss_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 13088
+        y: 0
+        width: 818
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c58c7f68c0da28230800000000000000
+      internalID: 3639661718184380508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 120586b249c91a94d88ed9749919d5f7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":17.0,"y":1.0},"gridSpriteSize":{"x":818.0,"y":1024.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      lazer_final_boss_spritesheet_0: 7631416915105190125
+      lazer_final_boss_spritesheet_1: -7386158783382931954
+      lazer_final_boss_spritesheet_10: 2728140192072293624
+      lazer_final_boss_spritesheet_11: -5237203067742081539
+      lazer_final_boss_spritesheet_12: -9078560218652875888
+      lazer_final_boss_spritesheet_13: 8604601307168138617
+      lazer_final_boss_spritesheet_14: -2001995584875827029
+      lazer_final_boss_spritesheet_15: 4479930834405033018
+      lazer_final_boss_spritesheet_16: 3639661718184380508
+      lazer_final_boss_spritesheet_2: 8419781333017110865
+      lazer_final_boss_spritesheet_3: -7935089252005812351
+      lazer_final_boss_spritesheet_4: -5443822120592679652
+      lazer_final_boss_spritesheet_5: 2899495702855622539
+      lazer_final_boss_spritesheet_6: 6252301652145971901
+      lazer_final_boss_spritesheet_7: 9073985784685555943
+      lazer_final_boss_spritesheet_8: -1585791116043481770
+      lazer_final_boss_spritesheet_9: 5991277868727026059
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

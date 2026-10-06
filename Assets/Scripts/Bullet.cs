@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private float velocidade = 122f;
+    [SerializeField] private float velocidade = 1000f;
     [SerializeField] private int direcao = 1; // 1 = sobe (jogador), -1 = desce (inimigo)
     [SerializeField] private float tempoDeVida = 3f;
     [SerializeField] private float danoBase = 1f;

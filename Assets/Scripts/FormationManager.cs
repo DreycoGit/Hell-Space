@@ -15,7 +15,7 @@ public class FormationManager : MonoBehaviour
     [SerializeField] private float chanceDeMergulhoPorSegundo = 0.15f;
     [SerializeField] private Transform jogador;
 
-    // O PhaseManager assina este evento pra saber quando pode avançar de fase.
+    // Quem controla a fase (FaseDeInimigos / PhaseManager) assina este evento pra saber quando avançar.
     public event System.Action OnFormacaoLimpa;
 
     private readonly List<Enemy> inimigos = new List<Enemy>();
@@ -23,7 +23,7 @@ public class FormationManager : MonoBehaviour
     private int direcao = 1;
     private float velocidadeAtual = 1.5f;
 
-    // Chamado pelo PhaseManager no início de cada fase de inimigos comuns.
+    // Chamado no início de cada fase de inimigos comuns.
     // linhasDeInimigos[0] é a linha da frente (mais fraca), as últimas são as mais fortes.
     public void MontarFormacao(GameObject[] linhasDeInimigos, int colunas, float espacoX, float espacoY, Vector3 origem, float velocidade)
     {
@@ -88,7 +88,10 @@ public class FormationManager : MonoBehaviour
             posicao.x += deslocamento;
             posicoesBase[inimigo] = posicao;
 
-            if (posicao.x <= limiteEsquerda || posicao.x >= limiteDireita)
+            // Só conta a borda para onde a formação está indo.
+            // Evita virar duas vezes seguidas (e descer duas vezes) por causa de variação de frame.
+            if ((direcao > 0 && posicao.x >= limiteDireita) ||
+                (direcao < 0 && posicao.x <= limiteEsquerda))
                 bateuNaBorda = true;
 
             inimigo.SeguirFormacao(posicao);

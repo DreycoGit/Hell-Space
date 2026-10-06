@@ -148,8 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b4117cb2f9b0c438a23b0220e482ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FormationManager
-  limiteEsquerda: -6.5
-  limiteDireita: 6.5
+  limiteEsquerda: -18
+  limiteDireita: 18
   passoParaBaixo: 0.4
   chanceDeMergulhoPorSegundo: 0.15
   jogador: {fileID: 0}
@@ -276,7 +276,111 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 800259cccaa9382499e7c09150cb930e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PhaseManager
-  fases: []
+  fases:
+  - nome: Fase-1
+    tipo: 0
+    linhasDeInimigos:
+    - {fileID: 1150736181052673663, guid: a32e998e33eaa4446999a1cef1cb6939, type: 3}
+    - {fileID: 1150736181052673663, guid: a32e998e33eaa4446999a1cef1cb6939, type: 3}
+    colunas: 10
+    espacoX: 1.5
+    espacoY: 1.2
+    origemFormacao: {x: -3, y: 4, z: 0}
+    velocidadeFormacao: 1
+    inimigosAleatorios: []
+    inimigosPorOnda: 0
+    intervaloEntreOndas: 0
+    areaMin: {x: 0, y: 0}
+    areaMax: {x: 0, y: 0}
+    distanciaMinima: 0
+    prefabBoss: {fileID: 0}
+    posicaoBoss: {x: 0, y: 0, z: 0}
+    fundoDeTela: {fileID: 0}
+  - nome: 
+    tipo: 0
+    linhasDeInimigos: []
+    colunas: 0
+    espacoX: 0
+    espacoY: 0
+    origemFormacao: {x: 0, y: 0, z: 0}
+    velocidadeFormacao: 0
+    inimigosAleatorios: []
+    inimigosPorOnda: 0
+    intervaloEntreOndas: 0
+    areaMin: {x: 0, y: 0}
+    areaMax: {x: 0, y: 0}
+    distanciaMinima: 0
+    prefabBoss: {fileID: 0}
+    posicaoBoss: {x: 0, y: 0, z: 0}
+    fundoDeTela: {fileID: 0}
+  - nome: 
+    tipo: 0
+    linhasDeInimigos: []
+    colunas: 0
+    espacoX: 0
+    espacoY: 0
+    origemFormacao: {x: 0, y: 0, z: 0}
+    velocidadeFormacao: 0
+    inimigosAleatorios: []
+    inimigosPorOnda: 0
+    intervaloEntreOndas: 0
+    areaMin: {x: 0, y: 0}
+    areaMax: {x: 0, y: 0}
+    distanciaMinima: 0
+    prefabBoss: {fileID: 0}
+    posicaoBoss: {x: 0, y: 0, z: 0}
+    fundoDeTela: {fileID: 0}
+  - nome: 
+    tipo: 0
+    linhasDeInimigos: []
+    colunas: 0
+    espacoX: 0
+    espacoY: 0
+    origemFormacao: {x: 0, y: 0, z: 0}
+    velocidadeFormacao: 0
+    inimigosAleatorios: []
+    inimigosPorOnda: 0
+    intervaloEntreOndas: 0
+    areaMin: {x: 0, y: 0}
+    areaMax: {x: 0, y: 0}
+    distanciaMinima: 0
+    prefabBoss: {fileID: 0}
+    posicaoBoss: {x: 0, y: 0, z: 0}
+    fundoDeTela: {fileID: 0}
+  - nome: 
+    tipo: 0
+    linhasDeInimigos: []
+    colunas: 0
+    espacoX: 0
+    espacoY: 0
+    origemFormacao: {x: 0, y: 0, z: 0}
+    velocidadeFormacao: 0
+    inimigosAleatorios: []
+    inimigosPorOnda: 0
+    intervaloEntreOndas: 0
+    areaMin: {x: 0, y: 0}
+    areaMax: {x: 0, y: 0}
+    distanciaMinima: 0
+    prefabBoss: {fileID: 0}
+    posicaoBoss: {x: 0, y: 0, z: 0}
+    fundoDeTela: {fileID: 0}
+  - nome: 
+    tipo: 0
+    linhasDeInimigos: []
+    colunas: 0
+    espacoX: 0
+    espacoY: 0
+    origemFormacao: {x: 0, y: 0, z: 0}
+    velocidadeFormacao: 0
+    inimigosAleatorios: []
+    inimigosPorOnda: 0
+    intervaloEntreOndas: 0
+    areaMin: {x: 0, y: 0}
+    areaMax: {x: 0, y: 0}
+    distanciaMinima: 0
+    prefabBoss: {fileID: 0}
+    posicaoBoss: {x: 0, y: 0, z: 0}
+    fundoDeTela: {fileID: 0}
   formationManager: {fileID: 648055972}
   spawnerAleatorio: {fileID: 2091077587}
   fundoRenderer: {fileID: 1654442144}
@@ -705,6 +809,14 @@ PrefabInstance:
       propertyPath: prefabTiro
       value: 
       objectReference: {fileID: 2867617484873572206, guid: 9a110a860e80ca74693e921da0818e0d, type: 3}
+    - target: {fileID: 6759002878027371727, guid: f902bb7cde472b94ba76145d85d32eb4, type: 3}
+      propertyPath: limiteDireita
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6759002878027371727, guid: f902bb7cde472b94ba76145d85d32eb4, type: 3}
+      propertyPath: limiteEsquerda
+      value: -18
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

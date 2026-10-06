@@ -113,6 +113,7 @@ public class Enemy : MonoBehaviour
 
     public void LevarDano(float dano)
     {
+        Debug.Log("LevarDano em " + name + "\n" + StackTraceUtility.ExtractStackTrace()); // TESTE
         vidaAtual -= dano;
         if (vidaAtual <= 0f)
         {
@@ -135,5 +136,11 @@ public class Enemy : MonoBehaviour
 
         GameObject prefab = prefabsPowerUp[Random.Range(0, prefabsPowerUp.Length)];
         Instantiate(prefab, transform.position, Quaternion.identity);
+    }
+
+    // TESTE: avisa quando o inimigo some (destruído ou desativado)
+    private void OnDisable()
+    {
+        Debug.Log("SUMIU: " + name + " em " + transform.position + " | vida=" + vidaAtual + " | tempo=" + Time.timeSinceLevelLoad.ToString("F1") + "s");
     }
 }

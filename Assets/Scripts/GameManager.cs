@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 // Sobrevive à troca de cena (DontDestroyOnLoad), então guarda o estado do jogo inteiro
@@ -94,10 +95,21 @@ public class GameManager : MonoBehaviour
         if (painelVitoria != null) painelVitoria.SetActive(true);
     }
 
-    public void Reiniciar()
+    // Zera o estado do jogo: pontos, vidas e a nave persistente (que fica inativa quando morre).
+    // Chame antes de começar um jogo novo (menu) ou de reiniciar.
+    public void NovoJogo()
     {
         Time.timeScale = 1f;
-        UnityEngine.SceneManagement.SceneManager.LoadScene(
-            UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        pontos = 0;
+        vidaJogadorPercentual = 1f;
+        vidaBossPercentual = 1f;
+        PlayerController.DestruirInstancia();
+    }
+
+    // Reinicia a cena atual do zero (pontos e vida resetados).
+    public void Reiniciar()
+    {
+        NovoJogo();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 776691688612883693}
   - component: {fileID: 3244368229029084112}
   - component: {fileID: 3695150474279059142}
+  - component: {fileID: -7605039999598168604}
   m_Layer: 0
   m_Name: white_forte
   m_TagString: Inimigo
@@ -193,3 +194,19 @@ MonoBehaviour:
   velocidadeMergulho: 4
   prefabsPowerUp: []
   chanceDeDroparPowerUp: 0.1
+--- !u!114 &-7605039999598168604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8405472047206750774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58fc5d971780374ca68c28906dda0ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Bullet
+  velocidade: 12
+  direcao: 1
+  tempoDeVida: 3
+  danoBase: 1

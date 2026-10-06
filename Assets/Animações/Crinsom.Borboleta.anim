@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: crinson_forte
+  m_Name: Crinsom.Borboleta
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,11 +21,11 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 6815742998536921756, guid: e3dfa7b9de372724cad8aab00270f3cb, type: 3}
+      value: {fileID: 1286532895756249638, guid: 86272204dda79ca4d8e7e3c63c3c0778, type: 3}
     - time: 0.083333336
-      value: {fileID: -6754009132362435919, guid: e3dfa7b9de372724cad8aab00270f3cb, type: 3}
+      value: {fileID: 8984982007362589412, guid: 86272204dda79ca4d8e7e3c63c3c0778, type: 3}
     - time: 0.16666667
-      value: {fileID: -740300711548032534, guid: e3dfa7b9de372724cad8aab00270f3cb, type: 3}
+      value: {fileID: 8249870799072143266, guid: 86272204dda79ca4d8e7e3c63c3c0778, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -48,9 +48,9 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 6815742998536921756, guid: e3dfa7b9de372724cad8aab00270f3cb, type: 3}
-    - {fileID: -6754009132362435919, guid: e3dfa7b9de372724cad8aab00270f3cb, type: 3}
-    - {fileID: -740300711548032534, guid: e3dfa7b9de372724cad8aab00270f3cb, type: 3}
+    - {fileID: 1286532895756249638, guid: 86272204dda79ca4d8e7e3c63c3c0778, type: 3}
+    - {fileID: 8984982007362589412, guid: 86272204dda79ca4d8e7e3c63c3c0778, type: 3}
+    - {fileID: 8249870799072143266, guid: 86272204dda79ca4d8e7e3c63c3c0778, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

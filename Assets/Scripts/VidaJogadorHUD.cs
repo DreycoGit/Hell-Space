@@ -1,104 +1,121 @@
 using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
 
-// Mostra o retrato de vida do jogador no HUD.
-// Verde (cheia) -> Amarelo (média) -> Vermelho (baixa).
-// Coloque este script na Image do Canvas. Ele lê a vida do PlayerHealth sozinho.
-[RequireComponent(typeof(Image))]
-public class VidaJogadorHUD : MonoBehaviour
+// Controla a vida do jogador em porcentagem (0 a 100).
+// O retrato de vida (verde/amarelo/vermelho) agora é feito pelo VidaJogadorHUD.
+// A troca de sprite da própria nave continua disponível, mas fica DESLIGADA por padrão.
+[RequireComponent(typeof(SpriteRenderer))]
+public class PlayerHealth : MonoBehaviour
 {
-    [Header("Referência do jogador")]
-    [Tooltip("Arraste a nave aqui. Se deixar vazio, o script procura sozinho.")]
-    [SerializeField] private PlayerHealth jogador;
+    [Header("Vida")]
+    [SerializeField] private float vidaMaxima = 100f;
+    [SerializeField] private float vidaAtual;
 
-    [Header("Sprites do retrato")]
-    [SerializeField] private Sprite vidaAlta;    // vida_alta.png  (verde)
-    [SerializeField] private Sprite vidaMedia;   // vida_media.png (amarelo)
-    [SerializeField] private Sprite vidaBaixa;   // vida_baixa.png (vermelho)
+    [Header("Visual da nave (opcional)")]
+    [Tooltip("Deixe DESLIGADO: o retrato de vida é o VidaJogadorHUD. Ligue só se tiver sprites DA NAVE para cada estado.")]
+    [SerializeField] private bool trocarSpriteDaNave = false;
 
-    [Header("Limites (0 a 1)")]
-    [Tooltip("A partir daqui o retrato fica verde (0.99 = só com vida cheia)")]
-    [SerializeField] private float limiteAlta = 0.99f;
-    [Tooltip("Acima disso fica amarelo; abaixo ou igual fica vermelho")]
-    [SerializeField] private float limiteMedia = 0.34f;
+    [Header("Sprites da nave por estado de vida (só usados se a opção acima estiver ligada)")]
+    [SerializeField] private Sprite spriteVidaCheia;
+    [SerializeField] private Sprite spriteVidaMedia;
+    [SerializeField] private Sprite spriteVidaBaixa;
 
-    [Header("Efeito ao trocar de estado")]
-    [SerializeField] private bool tremerAoMudar = true;
-    [SerializeField] private float duracaoTremida = 0.25f;
-    [SerializeField] private float forcaTremida = 8f;
+    [Header("Limites (em % da vida máxima)")]
+    [SerializeField] private float limiteVidaMedia = 66f; // abaixo disso vira "média"
+    [SerializeField] private float limiteVidaBaixa = 33f; // abaixo disso vira "baixa"
 
-    private Image imagem;
-    private Sprite spriteAtual;
-    private Vector2 posicaoOriginal;
-    private RectTransform rt;
-    private Coroutine tremida;
+    [Header("Invulnerabilidade após dano")]
+    [SerializeField] private float tempoInvulneravel = 1.2f;
+
+    private SpriteRenderer sprite;
+    private bool invulneravel;
+    private bool morto;
+
+    // Outros scripts podem ler isso pra saber a vida atual em % (0 a 1).
+    public float VidaPercentual => vidaAtual / vidaMaxima;
+    public bool EstaVivo => !morto;
 
     private void Awake()
     {
-        imagem = GetComponent<Image>();
-        rt = GetComponent<RectTransform>();
-        posicaoOriginal = rt.anchoredPosition;
+        sprite = GetComponent<SpriteRenderer>();
+        vidaAtual = vidaMaxima;
     }
 
     private void Start()
     {
-        ProcurarJogador();
-        Atualizar(false);
+        AtualizarSprite();
+        GameManager.Instancia?.AtualizarVida(VidaPercentual);
     }
 
-    private void Update()
+    public void ReceberDano(float quantidade)
     {
-        // Se a nave ainda não existia no Start (ex: é criada por prefab), continua procurando.
-        if (jogador == null)
-            ProcurarJogador();
+        if (invulneravel || morto) return;
 
-        Atualizar(true);
+        vidaAtual -= quantidade;
+        vidaAtual = Mathf.Clamp(vidaAtual, 0f, vidaMaxima);
+
+        AtualizarSprite();
+        GameManager.Instancia?.AtualizarVida(VidaPercentual);
+
+        if (vidaAtual <= 0f)
+        {
+            Morrer();
+        }
+        else
+        {
+            StartCoroutine(FicarInvulneravel());
+        }
     }
 
-    private void ProcurarJogador()
+    // Usado pelo power-up de cura.
+    public void Curar(float quantidade)
     {
-#if UNITY_2023_1_OR_NEWER
-        jogador = FindFirstObjectByType<PlayerHealth>();
-#else
-        jogador = FindObjectOfType<PlayerHealth>();
-#endif
+        if (morto) return;
+
+        vidaAtual += quantidade;
+        vidaAtual = Mathf.Clamp(vidaAtual, 0f, vidaMaxima);
+
+        AtualizarSprite();
+        GameManager.Instancia?.AtualizarVida(VidaPercentual);
     }
 
-    private void Atualizar(bool comEfeito)
+    private void AtualizarSprite()
     {
-        if (jogador == null) return;
+        // Desligado: a nave mantém o sprite que já tem no Sprite Renderer.
+        if (!trocarSpriteDaNave) return;
 
-        float p = jogador.VidaPercentual;
+        float percentual = VidaPercentual * 100f;
         Sprite novo;
 
-        if (p >= limiteAlta)       novo = vidaAlta;
-        else if (p > limiteMedia)  novo = vidaMedia;
-        else                       novo = vidaBaixa;
+        if (percentual <= limiteVidaBaixa)
+            novo = spriteVidaBaixa;
+        else if (percentual <= limiteVidaMedia)
+            novo = spriteVidaMedia;
+        else
+            novo = spriteVidaCheia;
 
-        if (novo == spriteAtual) return;
-
-        bool primeiraVez = spriteAtual == null;
-        spriteAtual = novo;
-        imagem.sprite = novo;
-
-        if (comEfeito && !primeiraVez && tremerAoMudar && gameObject.activeInHierarchy)
-        {
-            if (tremida != null) StopCoroutine(tremida);
-            tremida = StartCoroutine(Tremer());
-        }
+        // Só troca se o sprite foi atribuído (evita a nave sumir).
+        if (novo != null)
+            sprite.sprite = novo;
     }
 
-    private IEnumerator Tremer()
+    private System.Collections.IEnumerator FicarInvulneravel()
     {
-        float t = 0f;
-        while (t < duracaoTremida)
+        invulneravel = true;
+        float tempo = 0f;
+        while (tempo < tempoInvulneravel)
         {
-            Vector2 offset = Random.insideUnitCircle * forcaTremida;
-            rt.anchoredPosition = posicaoOriginal + offset;
-            t += Time.unscaledDeltaTime;
-            yield return null;
+            sprite.enabled = !sprite.enabled; // pisca a nave
+            tempo += 0.1f;
+            yield return new WaitForSeconds(0.1f);
         }
-        rt.anchoredPosition = posicaoOriginal;
+        sprite.enabled = true;
+        invulneravel = false;
+    }
+
+    private void Morrer()
+    {
+        morto = true;
+        GameManager.Instancia?.FimDeJogo();
+        gameObject.SetActive(false);
     }
 }

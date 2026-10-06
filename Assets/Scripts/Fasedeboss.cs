@@ -11,11 +11,17 @@ public class FaseDeBoss : MonoBehaviour
     [SerializeField] private int numeroDaFase = 3;
     [SerializeField] private string nomeDaProximaCena; // deixe vazio se for a última (ex: Fase 10)
 
+    [Header("Música")]
+    [Tooltip("Desmarque na Fase-10: o Deus Antigo começa dormindo e o próprio boss para a música.")]
+    [SerializeField] private bool tocarMusicaDoBoss = true;
+
     private void Start()
     {
         GameManager.Instancia?.AtualizarFase(numeroDaFase, nomeDaFase);
         GameManager.Instancia?.AtualizarVidaBoss(1f); // reseta a barra pro boss novo (evita mostrar a vida do boss anterior)
-        AudioManager.Instancia?.TocarMusicaBoss();
+
+        if (tocarMusicaDoBoss)
+            AudioManager.Instancia?.TocarMusicaBoss();
 
         if (boss != null)
             boss.OnBossDerrotado += IrParaProximaFase;

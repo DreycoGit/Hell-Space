@@ -25,12 +25,31 @@ public class PlayerController : MonoBehaviour
     private const string TagTiroInimigo = "TiroInimigo";
     private const string TagInimigo = "Inimigo";
 
+    // Garante que só exista UMA nave, mesmo que cada cena tenha uma (útil pra testar fases soltas).
+    private static PlayerController instancia;
+
     private float proximoTiro;
     private AudioSource audioSource;
     private PlayerHealth vida;
 
+    // Usado pelo GameManager ao reiniciar/começar um jogo novo:
+    // a nave morta fica inativa e persiste entre cenas, então precisa ser destruída.
+    public static void DestruirInstancia()
+    {
+        if (instancia != null) Destroy(instancia.gameObject);
+        instancia = null;
+    }
+
     private void Awake()
     {
+        if (instancia != null && instancia != this)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+            return;
+        }
+        instancia = this;
+
         audioSource = GetComponent<AudioSource>();
         vida = GetComponent<PlayerHealth>();
 
@@ -88,7 +107,12 @@ public class PlayerController : MonoBehaviour
         }
         else if (other.CompareTag(TagInimigo))
         {
-            Destroy(other.gameObject);
+            // Passa pelo Enemy.LevarDano -> Morrer(), que avisa a formação.
+            // Sem isso, a formação nunca esvazia e a fase não termina.
+            Enemy inimigo = other.GetComponent<Enemy>();
+            if (inimigo != null) inimigo.LevarDano(9999f);
+            else Destroy(other.gameObject);
+
             vida.ReceberDano(danoColisao);
         }
     }

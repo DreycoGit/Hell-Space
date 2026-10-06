@@ -9,6 +9,9 @@ public class MenuManager : MonoBehaviour
 
     void Start()
     {
+        // Se o jogador voltou pro menu depois de Game Over/Vitória, o tempo ainda estaria parado.
+        Time.timeScale = 1f;
+
         float volume = PlayerPrefs.GetFloat("Volume", 1f);
         AudioListener.volume = volume;
 
@@ -28,6 +31,8 @@ public class MenuManager : MonoBehaviour
     // Botão PLAY
     public void JogarJogo()
     {
+        // Zera pontos, vida e a nave da partida anterior (se existirem).
+        GameManager.Instancia?.NovoJogo();
         SceneManager.LoadScene("Fase-1");
     }
 

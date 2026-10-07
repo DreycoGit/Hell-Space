@@ -5,15 +5,33 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private float velocidade = 1000f;
+    [SerializeField] private float velocidade = 12f;
     [SerializeField] private int direcao = 1; // 1 = sobe (jogador), -1 = desce (inimigo)
-    [SerializeField] private float tempoDeVida = 3f;
+    [SerializeField] private float tempoDeVida = 1.5f;
     [SerializeField] private float danoBase = 1f;
+
+    [Header("Segurança (valem mesmo que o prefab tenha valores antigos)")]
+    [Tooltip("A velocidade nunca passa disso. Evita o tiro sair da tela em 1 frame.")]
+    [SerializeField] private float velocidadeMaxima = 20f;
+    [Tooltip("Se o tiro passar dessa distância (em Y), ele é destruído.")]
+    [SerializeField] private float limiteY = 12f;
 
     private void Start()
     {
-        GetComponent<Rigidbody2D>().linearVelocity = Vector2.up * velocidade * direcao;
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.gravityScale = 0f; // sem gravidade puxando o tiro
+
+        float velocidadeFinal = Mathf.Min(velocidade, velocidadeMaxima);
+        rb.linearVelocity = Vector2.up * velocidadeFinal * direcao;
+
         Destroy(gameObject, tempoDeVida);
+    }
+
+    private void Update()
+    {
+        // Rede de segurança: se saiu muito da tela, some.
+        if (Mathf.Abs(transform.position.y) > limiteY)
+            Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

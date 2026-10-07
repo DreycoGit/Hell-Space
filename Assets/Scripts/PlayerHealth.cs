@@ -1,52 +1,144 @@
 using UnityEngine;
-using UnityEngine.UI;
 
-// Coloque este script em um objeto de UI com um componente Image (o retrato de vida).
-// Ele troca o sprite do retrato conforme a vida do jogador.
-[RequireComponent(typeof(Image))]
-public class VidaJogadorHUD : MonoBehaviour
+// Vida do jogador por HITS: cheia (verde) -> média (amarelo) -> baixa (vermelho) -> morte.
+// O retrato de vida é trocado pelo VidaJogadorHUD e a tela de Game Over pelo TelaGameOver.
+// Este script só controla a vida.
+[RequireComponent(typeof(SpriteRenderer))]
+public class PlayerHealth : MonoBehaviour
 {
-    [Header("Retratos de vida")]
-    [SerializeField] private Sprite retratoVerde;     // vida alta
-    [SerializeField] private Sprite retratoAmarelo;   // vida média
-    [SerializeField] private Sprite retratoVermelho;  // vida baixa
+    [Header("Modo de dano")]
+    [Tooltip("Ligado: cada hit tira 1 estágio (3 hits = verde, amarelo, vermelho, morte). Desligado: usa a vida em porcentagem.")]
+    [SerializeField] private bool usarSistemaPorHits = true;
+    [SerializeField] private int hitsMaximos = 3;
 
-    [Header("Limites (em % da vida máxima)")]
-    [SerializeField] private float limiteMedia = 66f;
-    [SerializeField] private float limiteBaixa = 33f;
+    [Header("Vida")]
+    [SerializeField] private float vidaMaxima = 100f;
+    [SerializeField] private float vidaAtual;
 
-    private Image imagem;
-    private PlayerHealth jogador;
+    [Header("Visual da nave (opcional)")]
+    [Tooltip("Deixe desmarcado: o retrato de vida já é trocado pelo VidaJogadorHUD")]
+    [SerializeField] private bool trocarSpriteDaNave = false;
+
+    [Header("Sprites da nave por estado de vida")]
+    [SerializeField] private Sprite spriteVidaCheia;
+    [SerializeField] private Sprite spriteVidaMedia;
+    [SerializeField] private Sprite spriteVidaBaixa;
+
+    [Header("Limites (em % da vida máxima) - só no modo porcentagem")]
+    [SerializeField] private float limiteVidaMedia = 66f;
+    [SerializeField] private float limiteVidaBaixa = 33f;
+
+    [Header("Invulnerabilidade após dano")]
+    [SerializeField] private float tempoInvulneravel = 1.2f;
+
+    private SpriteRenderer sprite;
+    private bool invulneravel;
+    private bool morto;
+    private int hitsRestantes;
+
+    // Outros scripts leem isso (VidaJogadorHUD, TelaGameOver, barra de vida).
+    public float VidaPercentual => vidaAtual / vidaMaxima;
+    public bool EstaVivo => !morto;
 
     private void Awake()
     {
-        imagem = GetComponent<Image>();
+        sprite = GetComponent<SpriteRenderer>();
+        hitsMaximos = Mathf.Max(1, hitsMaximos);
+        hitsRestantes = hitsMaximos;
+        vidaAtual = vidaMaxima;
     }
 
-    private void Update()
+    private void Start()
     {
-        // O jogador pode ser criado depois (ele persiste entre cenas), então procura até achar.
-        if (jogador == null)
+        AtualizarSprite();
+        GameManager.Instancia?.AtualizarVida(VidaPercentual);
+    }
+
+    // No modo por hits, o valor de "quantidade" é ignorado: todo dano conta como 1 hit.
+    public void ReceberDano(float quantidade)
+    {
+        if (invulneravel || morto) return;
+
+        if (usarSistemaPorHits)
         {
-            jogador = FindObjectOfType<PlayerHealth>();
-            if (jogador == null) return;
+            hitsRestantes = Mathf.Clamp(hitsRestantes - 1, 0, hitsMaximos);
+            vidaAtual = vidaMaxima * hitsRestantes / hitsMaximos;
+        }
+        else
+        {
+            vidaAtual = Mathf.Clamp(vidaAtual - quantidade, 0f, vidaMaxima);
         }
 
-        AtualizarRetrato(jogador.VidaPercentual * 100f);
+        AtualizarSprite();
+        GameManager.Instancia?.AtualizarVida(VidaPercentual);
+
+        if (vidaAtual <= 0f) Morrer();
+        else StartCoroutine(FicarInvulneravel());
     }
 
-    private void AtualizarRetrato(float percentual)
+    // Usado pelo power-up de cura. No modo por hits, recupera 1 hit.
+    public void Curar(float quantidade)
     {
-        Sprite novo;
+        if (morto) return;
 
-        if (percentual <= limiteBaixa)
-            novo = retratoVermelho;
-        else if (percentual <= limiteMedia)
-            novo = retratoAmarelo;
+        if (usarSistemaPorHits)
+        {
+            hitsRestantes = Mathf.Clamp(hitsRestantes + 1, 0, hitsMaximos);
+            vidaAtual = vidaMaxima * hitsRestantes / hitsMaximos;
+        }
         else
-            novo = retratoVerde;
+        {
+            vidaAtual = Mathf.Clamp(vidaAtual + quantidade, 0f, vidaMaxima);
+        }
 
-        if (novo != null)
-            imagem.sprite = novo;
+        AtualizarSprite();
+        GameManager.Instancia?.AtualizarVida(VidaPercentual);
     }
+
+    private void AtualizarSprite()
+    {
+        if (!trocarSpriteDaNave) return;
+
+        Sprite escolhido;
+
+        if (usarSistemaPorHits)
+        {
+            if (hitsRestantes >= hitsMaximos) escolhido = spriteVidaCheia;
+            else if (hitsRestantes > 1)       escolhido = spriteVidaMedia;
+            else                              escolhido = spriteVidaBaixa;
+        }
+        else
+        {
+            float p = VidaPercentual * 100f;
+            if (p <= limiteVidaBaixa)      escolhido = spriteVidaBaixa;
+            else if (p <= limiteVidaMedia) escolhido = spriteVidaMedia;
+            else                           escolhido = spriteVidaCheia;
+        }
+
+        if (escolhido != null) sprite.sprite = escolhido;
+    }
+
+    private System.Collections.IEnumerator FicarInvulneravel()
+    {
+        invulneravel = true;
+        float tempo = 0f;
+        while (tempo < tempoInvulneravel)
+        {
+            sprite.enabled = !sprite.enabled; // pisca a nave
+            tempo += 0.1f;
+            yield return new WaitForSeconds(0.1f);
+        }
+        sprite.enabled = true;
+        invulneravel = false;
+    }
+
+    private void Morrer()
+    {
+        morto = true;
+        GameManager.Instancia?.FimDeJogo();
+        gameObject.SetActive(false);
+    }
+
+    [ContextMenu("Testar Dano")]
+    private void TestarDano() => ReceberDano(10f);
 }

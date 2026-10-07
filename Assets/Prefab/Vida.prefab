@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 3108409851591907798}
   - component: {fileID: 3254487877162727959}
   - component: {fileID: 385365377308214736}
+  - component: {fileID: 8781832212025825792}
+  - component: {fileID: 5408827549327755818}
+  - component: {fileID: 5322427870182465880}
   m_Layer: 5
   m_Name: Vida
   m_TagString: Untagged
@@ -88,12 +91,113 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30f77e921daa34341ad36235a50e47fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VidaJogadorHUD
-  jogador: {fileID: 0}
-  vidaAlta: {fileID: 3605552290935739754, guid: b4568c131ab80e047b21a5718052380a, type: 3}
-  vidaMedia: {fileID: -1522087926030069441, guid: b95129b8a78a4aa41a6b082b4a2540a9, type: 3}
-  vidaBaixa: {fileID: -5824334081386447215, guid: 348fa14364d44304ca1e55ceec0d0bf4, type: 3}
-  limiteAlta: 0.99
-  limiteMedia: 0.34
-  tremerAoMudar: 1
-  duracaoTremida: 0.25
-  forcaTremida: 8
+  vidaMaxima: 100
+  vidaAtual: 0
+  trocarSpriteDaNave: 1
+  spriteVidaCheia: {fileID: 3605552290935739754, guid: b4568c131ab80e047b21a5718052380a, type: 3}
+  spriteVidaMedia: {fileID: -1522087926030069441, guid: b95129b8a78a4aa41a6b082b4a2540a9, type: 3}
+  spriteVidaBaixa: {fileID: -5824334081386447215, guid: 348fa14364d44304ca1e55ceec0d0bf4, type: 3}
+  limiteVidaMedia: 66
+  limiteVidaBaixa: 33
+  tempoInvulneravel: 1.2
+--- !u!212 &8781832212025825792
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6864974018961403759}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &5408827549327755818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6864974018961403759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f77e921daa34341ad36235a50e47fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  vidaMaxima: 100
+  vidaAtual: 0
+  trocarSpriteDaNave: 0
+  spriteVidaCheia: {fileID: 0}
+  spriteVidaMedia: {fileID: 0}
+  spriteVidaBaixa: {fileID: 0}
+  limiteVidaMedia: 66
+  limiteVidaBaixa: 33
+  tempoInvulneravel: 1.2
+--- !u!114 &5322427870182465880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6864974018961403759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f77e921daa34341ad36235a50e47fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  vidaMaxima: 100
+  vidaAtual: 0
+  trocarSpriteDaNave: 0
+  spriteVidaCheia: {fileID: 0}
+  spriteVidaMedia: {fileID: 0}
+  spriteVidaBaixa: {fileID: 0}
+  limiteVidaMedia: 66
+  limiteVidaBaixa: 33
+  tempoInvulneravel: 1.2

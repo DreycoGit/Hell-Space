@@ -7,7 +7,6 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] private float velocidade = 12f;
     [SerializeField] private int direcao = 1; // 1 = sobe (jogador), -1 = desce (inimigo)
-    [SerializeField] private float tempoDeVida = 1.5f;
     [SerializeField] private float danoBase = 1f;
 
     [Header("Segurança (valem mesmo que o prefab tenha valores antigos)")]
@@ -23,8 +22,6 @@ public class Bullet : MonoBehaviour
 
         float velocidadeFinal = Mathf.Min(velocidade, velocidadeMaxima);
         rb.linearVelocity = Vector2.up * velocidadeFinal * direcao;
-
-        Destroy(gameObject, tempoDeVida);
     }
 
     private void Update()

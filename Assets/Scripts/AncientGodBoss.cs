@@ -102,7 +102,8 @@ public class AncientGodBoss : BossBase
             if (!EstaVivo) yield break;
 
             // Carrega e solta um laser grande no meio, ativo por um bom tempo
-            Instantiate(prefabLaserGrande, pontoCentro.position, Quaternion.identity);
+            GameObject Laser = Instantiate(prefabLaserGrande, pontoCentro.position, Quaternion.identity);
+            Laser.transform.SetParent(pontoCentro.transform); // faz o ponto de disparo do laser se mover junto com ele
             yield return new WaitForSeconds(3.5f); // ajuste conforme o tempoAtivo do Laser
             if (!EstaVivo) yield break;
 

@@ -128,7 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 152308806}
-  - component: {fileID: 152308805}
+  - component: {fileID: 152308807}
   m_Layer: 0
   m_Name: Fase
   m_TagString: Untagged
@@ -136,20 +136,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &152308805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 152308804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7f33701293ecbf418e0d147db5f942a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Fase1
-  formationManager: {fileID: 1818191091}
-  prefabCrimisomFraco: {fileID: 1150736181052673663, guid: a32e998e33eaa4446999a1cef1cb6939, type: 3}
 --- !u!4 &152308806
 Transform:
   m_ObjectHideFlags: 0
@@ -165,6 +151,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &152308807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152308804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b95671f330cea45a62fb986b514a4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TesteFase5
+  formationManager: {fileID: 1818191091}
+  prefabCrimisomFraco: {fileID: 7301744490562763366, guid: e7efa9228faafaf49807599208a5b98b, type: 3}
 --- !u!1 &529403240
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,15 +524,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FaseDeInimigos
   formationManager: {fileID: 1818191091}
   linhasDeInimigos:
-  - {fileID: 1150736181052673663, guid: a32e998e33eaa4446999a1cef1cb6939, type: 3}
+  - {fileID: 234192884494357329, guid: d854b363c8cc71048ae0ef995b0541a6, type: 3}
+  - {fileID: 7301744490562763366, guid: e7efa9228faafaf49807599208a5b98b, type: 3}
   colunas: 6
-  espacoX: 1.5
-  espacoY: 1.2
+  espacoX: 2
+  espacoY: 4
   origemFormacao: {x: -4, y: 4, z: 0}
   velocidadeFormacao: 1.5
-  nomeDaFase: Fase
-  numeroDaFase: 1
-  nomeDaProximaCena: 
+  nomeDaFase: Fase-5
+  numeroDaFase: 5
+  nomeDaProximaCena: Fase-6
 --- !u!4 &1706100099
 Transform:
   m_ObjectHideFlags: 0

@@ -256,54 +256,6 @@ RectTransform:
   m_AnchoredPosition: {x: -326, y: -182}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &694621163
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 694621165}
-  - component: {fileID: 694621164}
-  m_Layer: 0
-  m_Name: ControladorDeFase
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &694621164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 694621163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac29e965fe408fb40ba7c4cd827b0084, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FaseDeBoss
-  boss: {fileID: 798216905}
-  nomeDaFase: Boss
-  numeroDaFase: 3
-  nomeDaProximaCena: 
---- !u!4 &694621165
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 694621163}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.19505, y: -5.62142, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &728007195
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,50 +286,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 798216908}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &741191604
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 741191606}
-  - component: {fileID: 741191605}
-  m_Layer: 0
-  m_Name: 'GameManager '
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &741191605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 741191604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76df3effd40b2ad44bf4a9ef272590f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameManager
---- !u!4 &741191606
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 741191604}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.19505, y: -5.62142, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &798216904
 GameObject:
@@ -414,7 +322,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 798216907}
   spriteDormindo: {fileID: 4756872521517983721, guid: 9ca79766afa6c1243a919ad7720de1e9, type: 3}
   spriteAcordado: {fileID: 8943579734419203101, guid: d963ef12a3732fc4ba3ea8c7e8491264, type: 3}
-  vidaEstagio1: 200
+  vidaEstagio1: 50
   vidaEstagio2: 700
   prefabTiroGrande: {fileID: 8943482860376659153, guid: 17f58b75437f570448eb6cefd9d4129a, type: 3}
   prefabTiroPequeno: {fileID: 7879747148683204349, guid: 0b591a23447e50740b4ff142dbbc03f3, type: 3}
@@ -1115,7 +1023,7 @@ GameObject:
   m_Layer: 0
   m_Name: PontoCentro
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1283,7 +1191,7 @@ GameObject:
   m_Layer: 0
   m_Name: PontoEsquerda
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1390,5 +1298,3 @@ SceneRoots:
   - {fileID: 798216908}
   - {fileID: 1260000419}
   - {fileID: 2098218310}
-  - {fileID: 741191606}
-  - {fileID: 694621165}

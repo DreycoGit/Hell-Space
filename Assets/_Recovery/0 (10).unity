@@ -798,6 +798,158 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6864974018961403759, guid: 065656be7ec44424387c0cbacad97ad7, type: 3}
   m_PrefabInstance: {fileID: 6302531210493709963}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1449552005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1449552007}
+  - component: {fileID: 1449552006}
+  m_Layer: 0
+  m_Name: PhaseManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1449552006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449552005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 800259cccaa9382499e7c09150cb930e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PhaseManager
+  fases:
+  - nome: Fase-1
+    tipo: 0
+    linhasDeInimigos:
+    - {fileID: 1150736181052673663, guid: a32e998e33eaa4446999a1cef1cb6939, type: 3}
+    - {fileID: 1150736181052673663, guid: a32e998e33eaa4446999a1cef1cb6939, type: 3}
+    colunas: 10
+    espacoX: 1.5
+    espacoY: 1.2
+    origemFormacao: {x: -3, y: 4, z: 0}
+    velocidadeFormacao: 1
+    inimigosAleatorios: []
+    inimigosPorOnda: 0
+    intervaloEntreOndas: 0
+    areaMin: {x: 0, y: 0}
+    areaMax: {x: 0, y: 0}
+    distanciaMinima: 0
+    prefabBoss: {fileID: 0}
+    posicaoBoss: {x: 0, y: 0, z: 0}
+    fundoDeTela: {fileID: 0}
+  - nome: 
+    tipo: 0
+    linhasDeInimigos: []
+    colunas: 0
+    espacoX: 0
+    espacoY: 0
+    origemFormacao: {x: 0, y: 0, z: 0}
+    velocidadeFormacao: 0
+    inimigosAleatorios: []
+    inimigosPorOnda: 0
+    intervaloEntreOndas: 0
+    areaMin: {x: 0, y: 0}
+    areaMax: {x: 0, y: 0}
+    distanciaMinima: 0
+    prefabBoss: {fileID: 0}
+    posicaoBoss: {x: 0, y: 0, z: 0}
+    fundoDeTela: {fileID: 0}
+  - nome: 
+    tipo: 0
+    linhasDeInimigos: []
+    colunas: 0
+    espacoX: 0
+    espacoY: 0
+    origemFormacao: {x: 0, y: 0, z: 0}
+    velocidadeFormacao: 0
+    inimigosAleatorios: []
+    inimigosPorOnda: 0
+    intervaloEntreOndas: 0
+    areaMin: {x: 0, y: 0}
+    areaMax: {x: 0, y: 0}
+    distanciaMinima: 0
+    prefabBoss: {fileID: 0}
+    posicaoBoss: {x: 0, y: 0, z: 0}
+    fundoDeTela: {fileID: 0}
+  - nome: 
+    tipo: 0
+    linhasDeInimigos: []
+    colunas: 0
+    espacoX: 0
+    espacoY: 0
+    origemFormacao: {x: 0, y: 0, z: 0}
+    velocidadeFormacao: 0
+    inimigosAleatorios: []
+    inimigosPorOnda: 0
+    intervaloEntreOndas: 0
+    areaMin: {x: 0, y: 0}
+    areaMax: {x: 0, y: 0}
+    distanciaMinima: 0
+    prefabBoss: {fileID: 0}
+    posicaoBoss: {x: 0, y: 0, z: 0}
+    fundoDeTela: {fileID: 0}
+  - nome: 
+    tipo: 0
+    linhasDeInimigos: []
+    colunas: 0
+    espacoX: 0
+    espacoY: 0
+    origemFormacao: {x: 0, y: 0, z: 0}
+    velocidadeFormacao: 0
+    inimigosAleatorios: []
+    inimigosPorOnda: 0
+    intervaloEntreOndas: 0
+    areaMin: {x: 0, y: 0}
+    areaMax: {x: 0, y: 0}
+    distanciaMinima: 0
+    prefabBoss: {fileID: 0}
+    posicaoBoss: {x: 0, y: 0, z: 0}
+    fundoDeTela: {fileID: 0}
+  - nome: 
+    tipo: 0
+    linhasDeInimigos: []
+    colunas: 0
+    espacoX: 0
+    espacoY: 0
+    origemFormacao: {x: 0, y: 0, z: 0}
+    velocidadeFormacao: 0
+    inimigosAleatorios: []
+    inimigosPorOnda: 0
+    intervaloEntreOndas: 0
+    areaMin: {x: 0, y: 0}
+    areaMax: {x: 0, y: 0}
+    distanciaMinima: 0
+    prefabBoss: {fileID: 0}
+    posicaoBoss: {x: 0, y: 0, z: 0}
+    fundoDeTela: {fileID: 0}
+  formationManager: {fileID: 648055972}
+  spawnerAleatorio: {fileID: 2091077587}
+  fundoRenderer: {fileID: 1654442144}
+--- !u!4 &1449552007
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449552005}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.75597, y: 13.61081, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1548733625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1444,6 +1596,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1685479943}
   - {fileID: 1654442145}
+  - {fileID: 1449552007}
   - {fileID: 1548733629}
   - {fileID: 1016740053}
   - {fileID: 648055973}

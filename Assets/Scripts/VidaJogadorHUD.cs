@@ -12,8 +12,8 @@ public class VidaJogadorHUD : MonoBehaviour
     [SerializeField] private Sprite retratoVermelho;  // vida baixa
 
     [Header("Limites (em % da vida máxima)")]
-    [SerializeField] private float limiteMedia = 67f;
-    [SerializeField] private float limiteBaixa = 34f;
+    [SerializeField] private float limiteMedia = 66f;
+    [SerializeField] private float limiteBaixa = 33f;
 
     private Image imagem;
     private PlayerHealth jogador;
@@ -25,10 +25,10 @@ public class VidaJogadorHUD : MonoBehaviour
 
     private void Update()
     {
-        // O jogador pode ser criado depois, então procura até achar.
+        // O jogador pode ser criado depois (ele persiste entre cenas), então procura até achar.
         if (jogador == null)
         {
-            jogador = FindFirstObjectByType<PlayerHealth>();
+            jogador = FindObjectOfType<PlayerHealth>();
             if (jogador == null) return;
         }
 

@@ -40,7 +40,7 @@ RectTransform:
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -571, y: -324}
   m_SizeDelta: {x: 122.1192, y: 110.306}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.50000006, y: 0.5}
 --- !u!222 &3108409851591907798
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -91,15 +91,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30f77e921daa34341ad36235a50e47fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VidaJogadorHUD
-  vidaMaxima: 100
-  vidaAtual: 0
-  trocarSpriteDaNave: 1
-  spriteVidaCheia: {fileID: 3605552290935739754, guid: b4568c131ab80e047b21a5718052380a, type: 3}
-  spriteVidaMedia: {fileID: -1522087926030069441, guid: b95129b8a78a4aa41a6b082b4a2540a9, type: 3}
-  spriteVidaBaixa: {fileID: -5824334081386447215, guid: 348fa14364d44304ca1e55ceec0d0bf4, type: 3}
-  limiteVidaMedia: 66
-  limiteVidaBaixa: 33
-  tempoInvulneravel: 1.2
+  retratoVerde: {fileID: 3605552290935739754, guid: b4568c131ab80e047b21a5718052380a, type: 3}
+  retratoAmarelo: {fileID: -1522087926030069441, guid: b95129b8a78a4aa41a6b082b4a2540a9, type: 3}
+  retratoVermelho: {fileID: -5824334081386447215, guid: 348fa14364d44304ca1e55ceec0d0bf4, type: 3}
+  limiteMedia: 67
+  limiteBaixa: 34
 --- !u!212 &8781832212025825792
 SpriteRenderer:
   serializedVersion: 2
@@ -145,8 +141,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -494019737
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 0}
@@ -171,15 +167,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30f77e921daa34341ad36235a50e47fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
-  vidaMaxima: 100
-  vidaAtual: 0
-  trocarSpriteDaNave: 0
-  spriteVidaCheia: {fileID: 0}
-  spriteVidaMedia: {fileID: 0}
-  spriteVidaBaixa: {fileID: 0}
-  limiteVidaMedia: 66
-  limiteVidaBaixa: 33
-  tempoInvulneravel: 1.2
+  retratoVerde: {fileID: 0}
+  retratoAmarelo: {fileID: 0}
+  retratoVermelho: {fileID: 0}
+  limiteMedia: 67
+  limiteBaixa: 34
 --- !u!114 &5322427870182465880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,12 +184,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30f77e921daa34341ad36235a50e47fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
-  vidaMaxima: 100
-  vidaAtual: 0
-  trocarSpriteDaNave: 0
-  spriteVidaCheia: {fileID: 0}
-  spriteVidaMedia: {fileID: 0}
-  spriteVidaBaixa: {fileID: 0}
-  limiteVidaMedia: 66
-  limiteVidaBaixa: 33
-  tempoInvulneravel: 1.2
+  retratoVerde: {fileID: 0}
+  retratoAmarelo: {fileID: 0}
+  retratoVermelho: {fileID: 0}
+  limiteMedia: 67
+  limiteBaixa: 34

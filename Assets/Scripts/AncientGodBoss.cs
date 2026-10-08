@@ -5,6 +5,7 @@ using System.Collections;
 // Estágio 1: dormindo, não ataca (música de fundo para). Zerar a vida dele acorda o boss
 // em vez de matá-lo de verdade.
 // Estágio 2: muda de sprite e entra na rotação de ataques (cantos -> laser grande no meio -> tiros rápidos).
+// Ao morrer no estágio 2, mostra a tela de vitória.
 public class AncientGodBoss : BossBase
 {
     [Header("Sprites por estágio")]
@@ -120,9 +121,11 @@ public class AncientGodBoss : BossBase
         }
     }
 
+    // Só roda quando o estágio 2 zera (a morte de verdade do boss final)
     protected override void Derrotado()
     {
         base.Derrotado();
         GameManager.Instancia?.FimDeJogoVitoria();
+        TelaVitoria.Instancia?.Mostrar(); // <- linha nova: mostra o painel de vitória
     }
 }

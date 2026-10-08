@@ -16,7 +16,7 @@ public class TelaGameOver : MonoBehaviour
 
     [Header("Configuração")]
     [Tooltip("Nome EXATO da cena do menu (precisa estar nas Build Settings)")]
-    [SerializeField] private string nomeCenaMenu = "Menu";
+    [SerializeField] private string nomeCenaMenu = "MenuPrincipal"; 
     [SerializeField] private bool pausarJogo = true;
 
     private PlayerHealth jogador;
@@ -31,7 +31,15 @@ public class TelaGameOver : MonoBehaviour
 
     private void Update()
     {
-        if (mostrando) return;
+        // Se o ecrã já estiver a mostrar o Game Over, aguarda pelo Enter
+        if (mostrando) 
+        {
+            if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
+            {
+                Voltar();
+            }
+            return;
+        }
 
         // A nave pode ser criada depois (prefab), então continua procurando.
         if (jogador == null && !jogadorJaFoiVisto)
@@ -68,7 +76,7 @@ public class TelaGameOver : MonoBehaviour
         if (painel != null) painel.SetActive(true);
         if (pausarJogo) Time.timeScale = 0f;
 
-        // Deixa o botão selecionado: assim o ENTER aperta ele.
+        // Deixa o botão selecionado: assim o ENTER aperta ele pelo sistema UI.
         if (botaoVoltar != null && EventSystem.current != null)
             EventSystem.current.SetSelectedGameObject(botaoVoltar.gameObject);
     }
@@ -78,9 +86,8 @@ public class TelaGameOver : MonoBehaviour
     {
         Time.timeScale = 1f;
 
-        if (Application.CanStreamedLevelBeLoaded(nomeCenaMenu))
-            SceneManager.LoadScene(nomeCenaMenu);
-        else
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        // Força a ida para o menu em vez de reiniciar a cena atual
+        SceneManager.LoadScene(nomeCenaMenu);
     }
 }
+game over painel

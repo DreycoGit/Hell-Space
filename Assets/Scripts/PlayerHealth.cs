@@ -59,7 +59,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (invulneravel || morto) return;
 
-        if (usarSistemaPorHits)
+       /* if (usarSistemaPorHits)
         {
             hitsRestantes = Mathf.Clamp(hitsRestantes - 1, 0, hitsMaximos);
             vidaAtual = vidaMaxima * hitsRestantes / hitsMaximos;
@@ -67,7 +67,7 @@ public class PlayerHealth : MonoBehaviour
         else
         {
             vidaAtual = Mathf.Clamp(vidaAtual - quantidade, 0f, vidaMaxima);
-        }
+        }*/
 
         AtualizarSprite();
         GameManager.Instancia?.AtualizarVida(VidaPercentual);

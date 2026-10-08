@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 
 public enum TipoDeFase { InimigosComuns, Boss, InimigosAleatorios }
 
@@ -94,4 +94,4 @@ public class PhaseManager : MonoBehaviour
                 boss.OnBossDerrotado += AvancarFase;
         }
     }
-}
+}*/

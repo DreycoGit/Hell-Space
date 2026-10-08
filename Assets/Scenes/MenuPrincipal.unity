@@ -152,7 +152,7 @@ RectTransform:
   m_Father: {fileID: 977144013}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -641,7 +641,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &750374476
 RectTransform:
   m_ObjectHideFlags: 0
@@ -745,8 +745,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2859fb5c9345c7e449ff46f78e0c9582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuManager
-  painelOpcoes: {fileID: 750374475}
-  sliderVolume: {fileID: 1237916030}
 --- !u!1 &842919490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,7 +1206,7 @@ RectTransform:
   m_Father: {fileID: 978054085}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

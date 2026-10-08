@@ -66,12 +66,15 @@ public class BossCrimson : BossBase
             if (!EstaVivo) yield break;
 
             Instantiate(prefabLaser, pontoEsquerda.position, Quaternion.identity);
-            Instantiate(prefabLaser, pontoDireita.position, Quaternion.identity);
+            GameObject Laser1 = Instantiate(prefabLaser, pontoDireita.position, Quaternion.identity);
+            Laser1.transform.SetParent(pontoCentro.transform);
 
             yield return new WaitForSeconds(esperaEntreLateraisEMeio);
             if (!EstaVivo) yield break;
 
             Instantiate(prefabLaser, pontoCentro.position, Quaternion.identity);
+            GameObject Laser2 = Instantiate(prefabLaser, pontoCentro.position, Quaternion.identity);
+            Laser2.transform.SetParent(pontoCentro.transform);
 
             yield return new WaitForSeconds(esperaAposLaserMeio);
         }

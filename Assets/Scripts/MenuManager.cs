@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class MenuManager : MonoBehaviour
 {
@@ -32,7 +33,16 @@ public class MenuManager : MonoBehaviour
     public void JogarJogo()
     {
         // Zera pontos, vida e a nave da partida anterior (se existirem).
+        Time.timeScale = 1f;
+
+        // Remove o foco de qualquer botão do menu
+        if (EventSystem.current != null)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+        }
+    
         GameManager.Instancia?.NovoJogo();
+
         SceneManager.LoadScene("Fase-1");
     }
 

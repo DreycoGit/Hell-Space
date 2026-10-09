@@ -67,6 +67,6 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Hell-Space.slnx",
+    "dotnet.defaultSolution": "Hell-Space-2026-10-08-21-16-38.slnx",
     "dotnet.enableWorkspaceBasedDevelopment": false
 }

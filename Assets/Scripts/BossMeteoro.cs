@@ -7,12 +7,6 @@ public class BossMeteoro : BossBase
     [SerializeField] private float velocidade = 0.6f;
     [SerializeField] private float danoPorColisao = 30f;
 
-    protected override void Awake()
-    {
-        vidaMaxima = 200f;
-        base.Awake();
-    }
-
     protected override void IniciarBatalha()
     {
         // Sem rotina de ataque — o próprio avanço já é a ameaça.

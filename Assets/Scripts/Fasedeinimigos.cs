@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -20,6 +21,9 @@ public class FaseDeInimigos : MonoBehaviour
     [SerializeField] private string nomeDaFase = "Fase";
     [SerializeField] private int numeroDaFase = 1;
     [SerializeField] private string nomeDaProximaCena; // deixe vazio se for a última
+    [SerializeField] private float atrasoParaTrocar = 0.5f;
+
+    private bool trocando;
 
     private void Start()
     {
@@ -30,8 +34,25 @@ public class FaseDeInimigos : MonoBehaviour
         formationManager.MontarFormacao(linhasDeInimigos, colunas, espacoX, espacoY, origemFormacao, velocidadeFormacao);
     }
 
+    private void OnDestroy()
+    {
+        if (formationManager != null) formationManager.OnFormacaoLimpa -= IrParaProximaFase;
+    }
+
+    // O último inimigo morre dentro do OnTriggerEnter2D do tiro (callback de física).
+    // Trocar de cena ali mesmo é arriscado, então a troca vai pra uma corrotina,
+    // igual ao TrocaDeFaseBoss, e só acontece uma vez.
     private void IrParaProximaFase()
     {
+        if (trocando) return;
+        trocando = true;
+        StartCoroutine(Trocar());
+    }
+
+    private IEnumerator Trocar()
+    {
+        yield return new WaitForSeconds(atrasoParaTrocar);
+        Time.timeScale = 1f;
         if (!string.IsNullOrEmpty(nomeDaProximaCena))
             SceneManager.LoadScene(nomeDaProximaCena);
     }

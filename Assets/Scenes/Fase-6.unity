@@ -489,7 +489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36393ba00e455664d918f0b447f114af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossCrimson
-  vidaMaxima: 200
+  vidaMaxima: 100
   prefabTiroMedio: {fileID: 7397294801031106947, guid: 165094ead8687c14092a0b876eb84cf7, type: 3}
   prefabLaser: {fileID: 1735254863863720771, guid: 91616dbe35badd24f9bd655abbf01970, type: 3}
   pontoCentro: {fileID: 1744712680}

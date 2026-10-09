@@ -30,12 +30,6 @@ public class BossCrimson : BossBase
 
     private int direcaoMovimento = 1;
 
-    protected override void Awake()
-    {
-        vidaMaxima = 1000f;
-        base.Awake();
-    }
-
     protected override void IniciarBatalha()
     {
         StartCoroutine(RotinaDeAtaques());

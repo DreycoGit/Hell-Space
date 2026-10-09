@@ -384,7 +384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9557557bf0d69e4f9fab20065853e5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossWhiteScale
-  vidaMaxima: 500
+  vidaMaxima: 125
   prefabTiro: {fileID: 5956718944802498322, guid: 722787b2140d8ee4abece0dd9b35770a, type: 3}
   pontosDeTiro:
   - {fileID: 1345731162}

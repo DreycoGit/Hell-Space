@@ -527,12 +527,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf1476ddfe6dc14fbce3c5155e7698b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AncientGodBoss
-  vidaMaxima: 500
+  vidaMaxima: 150
   spriteRenderer: {fileID: 798216907}
   spriteDormindo: {fileID: 4756872521517983721, guid: 9ca79766afa6c1243a919ad7720de1e9, type: 3}
   spriteAcordado: {fileID: 8943579734419203101, guid: d963ef12a3732fc4ba3ea8c7e8491264, type: 3}
   vidaEstagio1: 50
-  vidaEstagio2: 700
   prefabTiroGrande: {fileID: 8943482860376659153, guid: 17f58b75437f570448eb6cefd9d4129a, type: 3}
   prefabTiroPequeno: {fileID: 7879747148683204349, guid: 0b591a23447e50740b4ff142dbbc03f3, type: 3}
   prefabLaserGrande: {fileID: 7108356285416647579, guid: 70d3e368d1e1cfa41964b6c183d5580f, type: 3}

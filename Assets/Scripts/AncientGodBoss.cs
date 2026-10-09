@@ -13,9 +13,9 @@ public class AncientGodBoss : BossBase
     [SerializeField] private Sprite spriteDormindo;
     [SerializeField] private Sprite spriteAcordado;
 
-    [Header("Vida de cada estágio")]
-    [SerializeField] private float vidaEstagio1 = 300f;
-    [SerializeField] private float vidaEstagio2 = 700f;
+    // A vida do combate de verdade (estágio 2) é a "Vida Maxima" do BossBase, no Inspector.
+    [Header("Vida do estágio 1 (dormindo; zerar só acorda o boss)")]
+    [SerializeField] private float vidaEstagio1 = 50f;
 
     [Header("Prefabs de ataque (estágio 2)")]
     [SerializeField] private GameObject prefabTiroGrande;
@@ -34,9 +34,12 @@ public class AncientGodBoss : BossBase
 
     private int direcaoMovimento = 1;
     private int estagioAtual = 1;
+    private float vidaDoCombate;
 
+    // Guarda a vida do Inspector pro estágio 2 e começa com a vida do estágio 1.
     protected override void Awake()
     {
+        vidaDoCombate = vidaMaxima;
         vidaMaxima = vidaEstagio1;
         base.Awake();
     }
@@ -81,8 +84,8 @@ public class AncientGodBoss : BossBase
     private void AcordarParaEstagio2()
     {
         estagioAtual = 2;
-        vidaMaxima = vidaEstagio2;
-        vidaAtual = vidaEstagio2;
+        vidaMaxima = vidaDoCombate;
+        vidaAtual = vidaDoCombate;
 
         if (spriteRenderer != null && spriteAcordado != null)
             spriteRenderer.sprite = spriteAcordado;

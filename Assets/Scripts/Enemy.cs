@@ -113,6 +113,10 @@ public class Enemy : MonoBehaviour
 
     public void LevarDano(float dano)
     {
+        // Dois tiros no mesmo frame não podem matar o inimigo duas vezes
+        // (pontuaria em dobro e avisaria a formação de novo).
+        if (!EstaVivo) return;
+
         Debug.Log("LevarDano em " + name + "\n" + StackTraceUtility.ExtractStackTrace()); // TESTE
         vidaAtual -= dano;
         if (vidaAtual <= 0f)

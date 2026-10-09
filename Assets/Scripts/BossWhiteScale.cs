@@ -15,12 +15,6 @@ public class BossWhiteScale : BossBase
 
     private int direcaoMovimento = 1;
 
-    protected override void Awake()
-    {
-        vidaMaxima = 900f;
-        base.Awake();
-    }
-
     protected override void IniciarBatalha()
     {
         StartCoroutine(RotinaDeSpam());

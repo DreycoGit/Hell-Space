@@ -4,19 +4,20 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 // Script pequeno: liga o painel de Game Over quando o jogador morre.
-// NÃO mexe no PlayerHealth. Coloque este script no CANVAS (objeto sempre ativo).
-// Considera "morto" se: EstaVivo for falso, a nave foi desativada ou a nave foi destruída.
+// NÃO mexe no PlayerHealth. Coloque este script em um objeto SEMPRE LIGADO
+// (o Canvas ou o GameOverSistema, nunca no PainelGameOver).
+// Versão com diagnóstico: escreve no Console o estado do painel ao mostrar.
 public class TelaGameOver : MonoBehaviour
 {
     [Header("Arraste aqui")]
-    [Tooltip("O PainelGameOver (pode estar desligado)")]
+    [Tooltip("O PainelGameOver da CENA (pode estar desligado). Não arraste o arquivo da pasta Prefab.")]
     [SerializeField] private GameObject painel;
     [Tooltip("Botão de voltar. O ENTER aciona ele sozinho.")]
     [SerializeField] private Button botaoVoltar;
 
     [Header("Configuração")]
     [Tooltip("Nome EXATO da cena do menu (precisa estar nas Build Settings)")]
-    [SerializeField] private string nomeCenaMenu = "Menu";
+    [SerializeField] private string nomeCenaMenu = "MenuPrincipal";
     [SerializeField] private bool pausarJogo = true;
 
     private PlayerHealth jogador;
@@ -25,8 +26,16 @@ public class TelaGameOver : MonoBehaviour
 
     private void Start()
     {
-        if (painel != null) painel.SetActive(false);
-        else Debug.LogWarning("TelaGameOver: o campo Painel está vazio! Arraste o PainelGameOver no Inspector do Canvas.");
+        if (painel == null)
+        {
+            Debug.LogWarning("TelaGameOver: o campo Painel está vazio! Arraste o PainelGameOver da Hierarchy no Inspector.");
+            return;
+        }
+
+        if (!painel.scene.IsValid())
+            Debug.LogWarning("TelaGameOver: o campo Painel aponta para o ARQUIVO da pasta Prefab, não para o objeto da cena! Arraste o PainelGameOver da Hierarchy.");
+
+        painel.SetActive(false);
     }
 
     private void Update()
@@ -36,7 +45,7 @@ public class TelaGameOver : MonoBehaviour
         // A nave pode ser criada depois (prefab), então continua procurando.
         if (jogador == null && !jogadorJaFoiVisto)
         {
-            jogador = FindFirstObjectByType<PlayerHealth>();
+            jogador = FindAnyObjectByType<PlayerHealth>();
             if (jogador != null)
             {
                 jogadorJaFoiVisto = true;
@@ -65,12 +74,67 @@ public class TelaGameOver : MonoBehaviour
     {
         mostrando = true;
 
-        if (painel != null) painel.SetActive(true);
+        if (painel == null)
+        {
+            Debug.LogError("TelaGameOver: não dá para mostrar, o campo Painel está VAZIO. Arraste o PainelGameOver no Inspector.");
+        }
+        else
+        {
+            // Liga qualquer objeto "pai" que esteja desligado (senão o painel não aparece)
+            Transform t = painel.transform.parent;
+            while (t != null)
+            {
+                if (!t.gameObject.activeSelf)
+                {
+                    Debug.LogWarning("TelaGameOver: o pai '" + t.name + "' estava DESLIGADO. Ligando.");
+                    t.gameObject.SetActive(true);
+                }
+                t = t.parent;
+            }
+
+            painel.SetActive(true);
+            painel.transform.SetAsLastSibling(); // desenha por cima dos irmãos
+
+            // Se algum CanvasGroup invisível estiver em volta, deixa visível
+            foreach (var grupo in painel.GetComponentsInParent<CanvasGroup>(true))
+                if (grupo.alpha < 1f) grupo.alpha = 1f;
+
+            DiagnosticoDoPainel();
+        }
+
         if (pausarJogo) Time.timeScale = 0f;
 
         // Deixa o botão selecionado: assim o ENTER aperta ele.
         if (botaoVoltar != null && EventSystem.current != null)
             EventSystem.current.SetSelectedGameObject(botaoVoltar.gameObject);
+    }
+
+    // Escreve no Console tudo que pode esconder o painel.
+    private void DiagnosticoDoPainel()
+    {
+        var rt = painel.GetComponent<RectTransform>();
+        var img = painel.GetComponent<Image>();
+        var canvas = painel.GetComponentInParent<Canvas>();
+
+        string msg = "TelaGameOver DIAGNÓSTICO: painel='" + painel.name + "'";
+        msg += " | ativoNaHierarquia=" + painel.activeInHierarchy;
+
+        if (rt != null)
+            msg += " | tamanho=" + Mathf.RoundToInt(rt.rect.width) + "x" + Mathf.RoundToInt(rt.rect.height);
+
+        if (img != null)
+            msg += " | imagem=" + (img.sprite != null ? img.sprite.name : "SEM SPRITE") +
+                   " | alfa=" + img.color.a.ToString("0.##") + " | imagemLigada=" + img.enabled;
+        else
+            msg += " | SEM componente Image no painel";
+
+        if (canvas != null)
+            msg += " | canvas='" + canvas.rootCanvas.name + "' modo=" + canvas.rootCanvas.renderMode +
+                   " ordem=" + canvas.rootCanvas.sortingOrder + " canvasLigado=" + canvas.rootCanvas.enabled;
+        else
+            msg += " | SEM Canvas acima do painel";
+
+        Debug.Log(msg);
     }
 
     // Ligue este método no On Click () do botão.
@@ -81,6 +145,10 @@ public class TelaGameOver : MonoBehaviour
         if (Application.CanStreamedLevelBeLoaded(nomeCenaMenu))
             SceneManager.LoadScene(nomeCenaMenu);
         else
+        {
+            Debug.LogWarning("TelaGameOver: a cena '" + nomeCenaMenu +
+                "' não está nas Build Settings. Reiniciando a fase.");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }

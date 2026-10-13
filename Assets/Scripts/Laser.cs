@@ -1,6 +1,6 @@
 using UnityEngine;
 
-// Representa um raio laser (usado pelo LaserBoss da Fase 6 e pelo AncientGodBoss da Fase 10).
+// Representa um raio laser (usado pelo BossCrimson da Fase 6 e pelo AncientGodBoss da Fase 10).
 // Primeiro pisca um "aviso" sem causar dano (tempo pro jogador se esquivar),
 // depois fica sólido e ativo causando dano por um tempo, e então some.
 public class Laser : MonoBehaviour
@@ -11,9 +11,43 @@ public class Laser : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Collider2D colisor; // deixe "Is Trigger" marcado no prefab
 
+    [Header("Seguir o boss")]
+    [Tooltip("Marque SÓ no prefab do laser do King Crimson (Fase 6). O laser acompanha o boss mantendo a distância em que nasceu.")]
+    [SerializeField] private bool seguirBoss = false;
+
+    private Transform alvo;
+    private Vector3 distanciaDoAlvo;
+    private bool tinhaAlvo;
+
     private void Start()
     {
+        // Se ninguém mandou seguir e o prefab está marcado, procura o boss sozinho.
+        if (seguirBoss && !tinhaAlvo)
+        {
+            BossBase boss = FindFirstObjectByType<BossBase>();
+            if (boss != null) SeguirAlvo(boss.transform);
+        }
+
         StartCoroutine(Rotina());
+    }
+
+    // O boss chama isto logo depois de criar o laser. Não precisa marcar nada no prefab.
+    public void SeguirAlvo(Transform novoAlvo)
+    {
+        if (novoAlvo == null) return;
+        alvo = novoAlvo;
+        distanciaDoAlvo = transform.position - alvo.position;
+        tinhaAlvo = true;
+    }
+
+    private void LateUpdate()
+    {
+        if (!tinhaAlvo) return;
+
+        if (alvo != null)
+            transform.position = alvo.position + distanciaDoAlvo;
+        else
+            Destroy(gameObject); // o boss foi destruído: o laser some junto
     }
 
     private System.Collections.IEnumerator Rotina()

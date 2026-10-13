@@ -840,9 +840,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 797047149}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2859fb5c9345c7e449ff46f78e0c9582, type: 3}
+  m_Script: {fileID: 11500000, guid: bfd3ed1f5db9e9f46999ee2a7c03ac18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuManager
+  painelOpcoes: {fileID: 750374475}
+  sliderVolume: {fileID: 1237916030}
 --- !u!1 &842919490
 GameObject:
   m_ObjectHideFlags: 0

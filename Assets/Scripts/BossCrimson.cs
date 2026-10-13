@@ -5,6 +5,8 @@ using System.Collections;
 // 1) alguns tiros médios em sequência
 // 2) dois lasers nas pontas (esquerda e direita) — jogador precisa ir pro meio
 // 3) um laser no meio — jogador precisa ir pras pontas
+// Os lasers acompanham o boss e cada etapa só começa quando a anterior terminou,
+// então nunca existem mais de 2 lasers ao mesmo tempo.
 public class BossCrimson : BossBase
 {
     [Header("Prefabs")]
@@ -30,6 +32,12 @@ public class BossCrimson : BossBase
 
     private int direcaoMovimento = 1;
 
+    protected override void Awake()
+    {
+        vidaMaxima = 1000f;
+        base.Awake();
+    }
+
     protected override void IniciarBatalha()
     {
         StartCoroutine(RotinaDeAtaques());
@@ -45,10 +53,25 @@ public class BossCrimson : BossBase
             direcaoMovimento *= -1;
     }
 
+    // Cria um laser no ponto e manda ele acompanhar o boss.
+    private GameObject DispararLaser(Transform ponto)
+    {
+        GameObject obj = Instantiate(prefabLaser, ponto.position, Quaternion.identity);
+
+        Laser laser = obj.GetComponentInChildren<Laser>();
+        if (laser != null)
+            laser.SeguirAlvo(transform);
+        else
+            Debug.LogWarning("BossCrimson: o prefab do laser não tem o script Laser, então ele não vai seguir o boss.");
+
+        return obj;
+    }
+
     private IEnumerator RotinaDeAtaques()
     {
         while (EstaVivo)
         {
+            // 1) Tiros médios em sequência
             for (int i = 0; i < quantidadeTirosSequencia; i++)
             {
                 if (!EstaVivo) yield break;
@@ -59,16 +82,23 @@ public class BossCrimson : BossBase
             yield return new WaitForSeconds(esperaAntesDosLaseresLaterais);
             if (!EstaVivo) yield break;
 
-            Instantiate(prefabLaser, pontoEsquerda.position, Quaternion.identity);
-            GameObject Laser1 = Instantiate(prefabLaser, pontoDireita.position, Quaternion.identity);
-            Laser1.transform.SetParent(pontoCentro.transform);
+            // 2) Dois lasers laterais (2 ao mesmo tempo)
+            GameObject laserEsquerdo = DispararLaser(pontoEsquerda);
+            GameObject laserDireito = DispararLaser(pontoDireita);
+
+            while (EstaVivo && (laserEsquerdo != null || laserDireito != null))
+                yield return null;
+            if (!EstaVivo) yield break;
 
             yield return new WaitForSeconds(esperaEntreLateraisEMeio);
             if (!EstaVivo) yield break;
 
-            Instantiate(prefabLaser, pontoCentro.position, Quaternion.identity);
-            GameObject Laser2 = Instantiate(prefabLaser, pontoCentro.position, Quaternion.identity);
-            Laser2.transform.SetParent(pontoCentro.transform);
+            // 3) Um laser no meio (só depois que os laterais acabaram)
+            GameObject laserMeio = DispararLaser(pontoCentro);
+
+            while (EstaVivo && laserMeio != null)
+                yield return null;
+            if (!EstaVivo) yield break;
 
             yield return new WaitForSeconds(esperaAposLaserMeio);
         }

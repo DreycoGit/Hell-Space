@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1048847312260427191}
   - component: {fileID: 434126894406335298}
   m_Layer: 0
-  m_Name: TiroDoWhite
+  m_Name: tiroDoWhite
   m_TagString: TiroInimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -192,8 +192,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 10.24, y: 7.6799994}
+  m_Offset: {x: -0.053593993, y: 0.72858757}
+  m_Size: {x: 0.6282374, y: 2.6049619}
   m_Direction: 0
 --- !u!114 &434126894406335298
 MonoBehaviour:
@@ -209,5 +209,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   velocidade: 9
   direcao: -1
-  tempoDeVida: 3
   danoBase: 1
+  velocidadeMaxima: 20
+  limiteY: 12

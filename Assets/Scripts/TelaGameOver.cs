@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 // Script pequeno: liga o painel de Game Over quando o jogador morre.
 // NÃO mexe no PlayerHealth. Coloque este script em um objeto SEMPRE LIGADO
 // (o Canvas ou o GameOverSistema, nunca no PainelGameOver).
-// Versão com diagnóstico: escreve no Console o estado do painel ao mostrar.
 public class TelaGameOver : MonoBehaviour
 {
     [Header("Arraste aqui")]
@@ -98,8 +97,6 @@ public class TelaGameOver : MonoBehaviour
             // Se algum CanvasGroup invisível estiver em volta, deixa visível
             foreach (var grupo in painel.GetComponentsInParent<CanvasGroup>(true))
                 if (grupo.alpha < 1f) grupo.alpha = 1f;
-
-            DiagnosticoDoPainel();
         }
 
         if (pausarJogo) Time.timeScale = 0f;
@@ -109,38 +106,14 @@ public class TelaGameOver : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(botaoVoltar.gameObject);
     }
 
-    // Escreve no Console tudo que pode esconder o painel.
-    private void DiagnosticoDoPainel()
-    {
-        var rt = painel.GetComponent<RectTransform>();
-        var img = painel.GetComponent<Image>();
-        var canvas = painel.GetComponentInParent<Canvas>();
-
-        string msg = "TelaGameOver DIAGNÓSTICO: painel='" + painel.name + "'";
-        msg += " | ativoNaHierarquia=" + painel.activeInHierarchy;
-
-        if (rt != null)
-            msg += " | tamanho=" + Mathf.RoundToInt(rt.rect.width) + "x" + Mathf.RoundToInt(rt.rect.height);
-
-        if (img != null)
-            msg += " | imagem=" + (img.sprite != null ? img.sprite.name : "SEM SPRITE") +
-                   " | alfa=" + img.color.a.ToString("0.##") + " | imagemLigada=" + img.enabled;
-        else
-            msg += " | SEM componente Image no painel";
-
-        if (canvas != null)
-            msg += " | canvas='" + canvas.rootCanvas.name + "' modo=" + canvas.rootCanvas.renderMode +
-                   " ordem=" + canvas.rootCanvas.sortingOrder + " canvasLigado=" + canvas.rootCanvas.enabled;
-        else
-            msg += " | SEM Canvas acima do painel";
-
-        Debug.Log(msg);
-    }
-
     // Ligue este método no On Click () do botão.
     public void Voltar()
     {
         Time.timeScale = 1f;
+
+        // Zera pontos, vida e destrói a nave persistente (método do próprio GameManager).
+        if (GameManager.Instancia != null)
+            GameManager.Instancia.NovoJogo();
 
         if (Application.CanStreamedLevelBeLoaded(nomeCenaMenu))
             SceneManager.LoadScene(nomeCenaMenu);

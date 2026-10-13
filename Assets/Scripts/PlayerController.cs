@@ -44,9 +44,24 @@ public class PlayerController : MonoBehaviour
     {
         if (instancia != null && instancia != this)
         {
-            gameObject.SetActive(false);
-            Destroy(gameObject);
-            return;
+            // Se a nave antiga está morta ou inativa, ela é descartada e esta nova assume.
+            PlayerHealth vidaAntiga = instancia.GetComponent<PlayerHealth>();
+            bool antigaMorta = !instancia.gameObject.activeInHierarchy
+                               || (vidaAntiga != null && !vidaAntiga.EstaVivo);
+
+            if (antigaMorta)
+            {
+                Debug.Log("PlayerController: nave antiga estava morta, substituindo pela nova.");
+                Destroy(instancia.gameObject);
+                instancia = null;
+            }
+            else
+            {
+                // Nave antiga viva: esta é só uma cópia da cena, descarta.
+                gameObject.SetActive(false);
+                Destroy(gameObject);
+                return;
+            }
         }
         instancia = this;
 

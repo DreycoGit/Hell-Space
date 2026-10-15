@@ -148,8 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b4117cb2f9b0c438a23b0220e482ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FormationManager
-  limiteEsquerda: -18
-  limiteDireita: 18
+  limiteEsquerda: -16
+  limiteDireita: 16
   passoParaBaixo: 0.4
   chanceDeMergulhoPorSegundo: 0.15
   jogador: {fileID: 0}
@@ -629,10 +629,11 @@ MonoBehaviour:
   linhasDeInimigos:
   - {fileID: 3447976522921828060, guid: 7e418f2369ef40346ba0aadf138267a6, type: 3}
   - {fileID: 3447976522921828060, guid: 7e418f2369ef40346ba0aadf138267a6, type: 3}
-  colunas: 13
-  espacoX: 1.5
-  espacoY: 1.2
-  origemFormacao: {x: -4, y: 4, z: 0}
+  - {fileID: 3447976522921828060, guid: 7e418f2369ef40346ba0aadf138267a6, type: 3}
+  colunas: 12
+  espacoX: 2
+  espacoY: 2
+  origemFormacao: {x: -4, y: 11, z: 0}
   velocidadeFormacao: 1.5
   nomeDaFase: Fase-7
   numeroDaFase: 7
@@ -982,52 +983,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1930163351
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1930163353}
-  - component: {fileID: 1930163354}
-  m_Layer: 0
-  m_Name: Fase
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1930163353
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1930163351}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.81828, y: 221.92587, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1930163354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1930163351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b26dcb13196424f49952952fb651b2a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TesteFase7
-  formationManager: {fileID: 117600496}
-  prefabCrimisomFraco: {fileID: 3447976522921828060, guid: 7e418f2369ef40346ba0aadf138267a6, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1039,4 +994,3 @@ SceneRoots:
   - {fileID: 911871179}
   - {fileID: 117600497}
   - {fileID: 860678225}
-  - {fileID: 1930163353}

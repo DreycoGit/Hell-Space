@@ -231,8 +231,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 51, y: -97}
-  m_SizeDelta: {x: 250.8691, y: 30}
+  m_AnchoredPosition: {x: 11.0807, y: -256.3654}
+  m_SizeDelta: {x: 306.7076, y: 79.2692}
   m_Pivot: {x: 0.49999997, y: 0.50000024}
 --- !u!114 &90562927
 MonoBehaviour:
@@ -592,7 +592,7 @@ Transform:
   m_GameObject: {fileID: 728007195}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.23, y: 0, z: 0}
+  m_LocalPosition: {x: 1.64, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -629,20 +629,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf1476ddfe6dc14fbce3c5155e7698b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AncientGodBoss
-  vidaMaxima: 150
+  vidaMaxima: 1200
   spriteRenderer: {fileID: 798216907}
   spriteDormindo: {fileID: 4756872521517983721, guid: 9ca79766afa6c1243a919ad7720de1e9, type: 3}
   spriteAcordado: {fileID: 8943579734419203101, guid: d963ef12a3732fc4ba3ea8c7e8491264, type: 3}
-  vidaEstagio1: 50
+  vidaEstagio1: 150
   prefabTiroGrande: {fileID: 8943482860376659153, guid: 17f58b75437f570448eb6cefd9d4129a, type: 3}
   prefabTiroPequeno: {fileID: 7879747148683204349, guid: 0b591a23447e50740b4ff142dbbc03f3, type: 3}
   prefabLaserGrande: {fileID: 7108356285416647579, guid: 70d3e368d1e1cfa41964b6c183d5580f, type: 3}
   pontoEsquerda: {fileID: 1638484821}
   pontoDireita: {fileID: 728007196}
   pontoCentro: {fileID: 1419845847}
-  velocidadeMovimento: 1.5
-  limiteEsquerda: -3.5
-  limiteDireita: 3.5
+  velocidadeMovimento: 3.5
+  limiteEsquerda: -16
+  limiteDireita: 16
 --- !u!58 &798216906
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -914,6 +914,7 @@ GameObject:
   - component: {fileID: 1281216624}
   - component: {fileID: 1281216623}
   - component: {fileID: 1281216626}
+  - component: {fileID: 1281216627}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1039,6 +1040,103 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!82 &1281216627
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281216622}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: b99550f84dc08f147af8f72e39bf6d98, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1284146111
 GameObject:
   m_ObjectHideFlags: 0
@@ -1460,7 +1558,7 @@ Transform:
   m_GameObject: {fileID: 1638484820}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2, y: 0, z: 0}
+  m_LocalPosition: {x: -1.7, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

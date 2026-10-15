@@ -171,8 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b4117cb2f9b0c438a23b0220e482ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FormationManager
-  limiteEsquerda: -18
-  limiteDireita: 18
+  limiteEsquerda: -16
+  limiteDireita: 16
   passoParaBaixo: 0.4
   chanceDeMergulhoPorSegundo: 0.15
   jogador: {fileID: 0}
@@ -224,10 +224,10 @@ MonoBehaviour:
   linhasDeInimigos:
   - {fileID: 1150736181052673663, guid: a32e998e33eaa4446999a1cef1cb6939, type: 3}
   - {fileID: 1150736181052673663, guid: a32e998e33eaa4446999a1cef1cb6939, type: 3}
-  colunas: 12
-  espacoX: 1.4
-  espacoY: 1.6
-  origemFormacao: {x: -4, y: 4, z: 0}
+  colunas: 9
+  espacoX: 2
+  espacoY: 2.4
+  origemFormacao: {x: -4, y: 10, z: 0}
   velocidadeFormacao: 1.5
   nomeDaFase: Fase-1
   numeroDaFase: 1
@@ -872,6 +872,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2382639626151315133, guid: 5bb461e37ecb77f45967e88c07e8d119, type: 3}
+      propertyPath: limiteDireita
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2382639626151315133, guid: 5bb461e37ecb77f45967e88c07e8d119, type: 3}
+      propertyPath: limiteEsquerda
+      value: -16
+      objectReference: {fileID: 0}
     - target: {fileID: 4087425696755318697, guid: 5bb461e37ecb77f45967e88c07e8d119, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2852328720683692321, guid: f902bb7cde472b94ba76145d85d32eb4, type: 3}
+      propertyPath: vidaMaxima
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 2852328720683692321, guid: f902bb7cde472b94ba76145d85d32eb4, type: 3}
+      propertyPath: trocarSpriteDaNave
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4565110440304596027, guid: f902bb7cde472b94ba76145d85d32eb4, type: 3}
       propertyPath: m_Name
       value: NaveJogador Variant

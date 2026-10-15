@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] private float velocidade = 12f;
     [SerializeField] private int direcao = 1; // 1 = sobe (jogador), -1 = desce (inimigo)
-    [SerializeField] private float danoBase = 1f;
+    [SerializeField] private float danoBase = 3f;
 
     [Header("Segurança (valem mesmo que o prefab tenha valores antigos)")]
     [Tooltip("A velocidade nunca passa disso. Evita o tiro sair da tela em 1 frame.")]

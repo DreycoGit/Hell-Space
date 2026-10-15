@@ -119,52 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &47175219
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 47175221}
-  - component: {fileID: 47175220}
-  m_Layer: 0
-  m_Name: Fase
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &47175220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 47175219}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17da8d81a6d3cb64597b1d721f4f39cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TesteFase4
-  formationManager: {fileID: 231446633}
-  prefabCrimisomFraco: {fileID: 4146623602304575112, guid: 8fd19abb7ff27ca4cb5f4d05858d0cb9, type: 3}
---- !u!4 &47175221
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 47175219}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.81828, y: 221.92587, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &231446632
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,8 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b4117cb2f9b0c438a23b0220e482ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FormationManager
-  limiteEsquerda: -18
-  limiteDireita: 18
+  limiteEsquerda: -16
+  limiteDireita: 16
   passoParaBaixo: 0.4
   chanceDeMergulhoPorSegundo: 0.15
   jogador: {fileID: 0}
@@ -958,12 +912,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FaseDeInimigos
   formationManager: {fileID: 231446633}
   linhasDeInimigos:
-  - {fileID: 234192884494357329, guid: d854b363c8cc71048ae0ef995b0541a6, type: 3}
   - {fileID: 3019444075439992950, guid: 5a30ec8a74ab7da4ca6eb116e45c50d5, type: 3}
+  - {fileID: 1150736181052673663, guid: a32e998e33eaa4446999a1cef1cb6939, type: 3}
+  - {fileID: 234192884494357329, guid: d854b363c8cc71048ae0ef995b0541a6, type: 3}
   colunas: 10
   espacoX: 3
   espacoY: 3
-  origemFormacao: {x: -4, y: 4, z: 0}
+  origemFormacao: {x: -4, y: 10.5, z: 0}
   velocidadeFormacao: 1.5
   nomeDaFase: Fase-4
   numeroDaFase: 4
@@ -1037,6 +992,5 @@ SceneRoots:
   - {fileID: 707786621}
   - {fileID: 231446634}
   - {fileID: 1060253603}
-  - {fileID: 47175221}
   - {fileID: 2141916440}
   - {fileID: 949046088}

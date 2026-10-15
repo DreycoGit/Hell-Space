@@ -221,52 +221,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2480631728662658004, guid: 273c90c6da958404e96ba52c2f6d2d5a, type: 3}
   m_PrefabInstance: {fileID: 105917126}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &152308804
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 152308806}
-  - component: {fileID: 152308807}
-  m_Layer: 0
-  m_Name: Fase
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &152308806
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 152308804}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.81828, y: 221.92587, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &152308807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 152308804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4b95671f330cea45a62fb986b514a4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TesteFase5
-  formationManager: {fileID: 1818191091}
-  prefabCrimisomFraco: {fileID: 7301744490562763366, guid: e7efa9228faafaf49807599208a5b98b, type: 3}
 --- !u!1 &529403240
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,12 +581,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FaseDeInimigos
   formationManager: {fileID: 1818191091}
   linhasDeInimigos:
-  - {fileID: 234192884494357329, guid: d854b363c8cc71048ae0ef995b0541a6, type: 3}
   - {fileID: 7301744490562763366, guid: e7efa9228faafaf49807599208a5b98b, type: 3}
-  colunas: 6
-  espacoX: 2
+  - {fileID: 3019444075439992950, guid: 5a30ec8a74ab7da4ca6eb116e45c50d5, type: 3}
+  - {fileID: 234192884494357329, guid: d854b363c8cc71048ae0ef995b0541a6, type: 3}
+  colunas: 10
+  espacoX: 3
   espacoY: 4
-  origemFormacao: {x: -4, y: 4, z: 0}
+  origemFormacao: {x: -4, y: 10, z: 0}
   velocidadeFormacao: 1.5
   nomeDaFase: Fase-5
   numeroDaFase: 5
@@ -682,8 +637,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b4117cb2f9b0c438a23b0220e482ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FormationManager
-  limiteEsquerda: -18
-  limiteDireita: 18
+  limiteEsquerda: -16
+  limiteDireita: 16
   passoParaBaixo: 0.4
   chanceDeMergulhoPorSegundo: 0.15
   jogador: {fileID: 0}
@@ -1039,4 +994,3 @@ SceneRoots:
   - {fileID: 1537327786}
   - {fileID: 1818191092}
   - {fileID: 1706100099}
-  - {fileID: 152308806}

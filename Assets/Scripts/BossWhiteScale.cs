@@ -6,7 +6,7 @@ public class BossWhiteScale : BossBase
 {
     [SerializeField] private GameObject prefabTiro;
     [SerializeField] private Transform[] pontosDeTiro;
-    [SerializeField] private float intervaloEntreTiros = 0.35f;
+    [SerializeField] private float intervaloEntreTiros = 0.20f;
 
     [Header("Movimento (vai e volta na horizontal)")]
     [SerializeField] private float velocidadeMovimento = 1.5f;

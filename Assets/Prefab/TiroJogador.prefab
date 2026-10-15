@@ -180,9 +180,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d58fc5d971780374ca68c28906dda0ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
-  velocidade: 10
+  velocidade: 20
   direcao: 1
-  tempoDeVida: 3
   danoBase: 5
   velocidadeMaxima: 20
   limiteY: 12
